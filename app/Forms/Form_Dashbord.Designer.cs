@@ -55,11 +55,14 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnClose = new System.Windows.Forms.Button();
             this.home_User1 = new app.Forms.Home_User();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicator)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -75,21 +78,26 @@
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(6, 6);
+            this.panel1.Margin = new System.Windows.Forms.Padding(10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(255, 702);
+            this.panel1.Size = new System.Drawing.Size(261, 702);
             this.panel1.TabIndex = 0;
             // 
             // indicator
             // 
+            this.indicator.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
             this.indicator.BackColor = System.Drawing.Color.Transparent;
+            this.indicator.ErrorImage = null;
             this.indicator.Image = ((System.Drawing.Image)(resources.GetObject("indicator.Image")));
-            this.indicator.Location = new System.Drawing.Point(215, 198);
+            this.indicator.InitialImage = null;
+            this.indicator.Location = new System.Drawing.Point(216, 206);
             this.indicator.Name = "indicator";
-            this.indicator.Size = new System.Drawing.Size(96, 120);
+            this.indicator.Size = new System.Drawing.Size(99, 120);
             this.indicator.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.indicator.TabIndex = 3;
             this.indicator.TabStop = false;
             this.indicator.Visible = false;
+            this.indicator.Click += new System.EventHandler(this.indicator_Click);
             // 
             // btnOther
             // 
@@ -117,7 +125,7 @@
             this.btnOther.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
             this.btnOther.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
             this.btnOther.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnOther.ForeColor = System.Drawing.Color.White;
+            this.btnOther.ForeColor = System.Drawing.Color.Transparent;
             this.btnOther.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
             this.btnOther.IconMarginLeft = 30;
             this.btnOther.IconPadding = 10;
@@ -353,12 +361,11 @@
             // 
             // btnLecture
             // 
-            this.btnLecture.AccessibleRole = System.Windows.Forms.AccessibleRole.RadioButton;
             this.btnLecture.AllowToggling = false;
             this.btnLecture.AnimationSpeed = 200;
             this.btnLecture.AutoGenerateColors = false;
             this.btnLecture.BackColor = System.Drawing.Color.Transparent;
-            this.btnLecture.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnLecture.BackColor1 = System.Drawing.Color.Transparent;
             this.btnLecture.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLecture.BackgroundImage")));
             this.btnLecture.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btnLecture.ButtonText = "Lecture";
@@ -385,7 +392,7 @@
             this.btnLecture.IdleBorderColor = System.Drawing.Color.Transparent;
             this.btnLecture.IdleBorderRadius = 45;
             this.btnLecture.IdleBorderThickness = 3;
-            this.btnLecture.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.btnLecture.IdleFillColor = System.Drawing.Color.Transparent;
             this.btnLecture.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnLecture.IdleIconLeftImage")));
             this.btnLecture.IdleIconRightImage = null;
             this.btnLecture.IndicateFocus = true;
@@ -404,8 +411,8 @@
             stateProperties10.BorderRadius = 45;
             stateProperties10.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             stateProperties10.BorderThickness = 3;
-            stateProperties10.FillColor = System.Drawing.Color.White;
-            stateProperties10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            stateProperties10.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            stateProperties10.ForeColor = System.Drawing.Color.White;
             stateProperties10.IconLeftImage = ((System.Drawing.Image)(resources.GetObject("stateProperties10.IconLeftImage")));
             stateProperties10.IconRightImage = null;
             this.btnLecture.OnPressedState = stateProperties10;
@@ -442,7 +449,16 @@
             // bunifuElipse2
             // 
             this.bunifuElipse2.ElipseRadius = 15;
-            this.bunifuElipse2.TargetControl = this;
+            this.bunifuElipse2.TargetControl = this.panel2;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.btnClose);
+            this.panel2.Location = new System.Drawing.Point(266, 9);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1128, 38);
+            this.panel2.TabIndex = 5;
             // 
             // btnClose
             // 
@@ -450,8 +466,8 @@
             this.btnClose.FlatAppearance.BorderSize = 0;
             this.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnClose.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(1347, 9);
+            this.btnClose.ForeColor = System.Drawing.Color.Black;
+            this.btnClose.Location = new System.Drawing.Point(1078, 3);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(47, 46);
             this.btnClose.TabIndex = 3;
@@ -461,20 +477,25 @@
             // 
             // home_User1
             // 
-            this.home_User1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(250)))), ((int)(((byte)(252)))));
+            this.home_User1.BackColor = System.Drawing.Color.White;
             this.home_User1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.home_User1.Location = new System.Drawing.Point(267, 53);
             this.home_User1.Name = "home_User1";
             this.home_User1.Size = new System.Drawing.Size(1127, 652);
             this.home_User1.TabIndex = 4;
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 15;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // Form_Dashbord
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             this.ClientSize = new System.Drawing.Size(1403, 714);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.home_User1);
-            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -486,6 +507,7 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.indicator)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -504,5 +526,7 @@
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.PictureBox indicator;
         private Home_User home_User1;
+        private System.Windows.Forms.Panel panel2;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }

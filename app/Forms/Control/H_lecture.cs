@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using app.Forms.Lecturer;
 
 namespace app.Forms.Control
 {
@@ -50,32 +51,60 @@ namespace app.Forms.Control
 
         private void btnAddLecture_Click(object sender, EventArgs e)
         {
+
+        }
+
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            
+            //Add_Lecturer.Instance.Dock = DockStyle.None;
+            PnlContainer.Controls.Clear();
+            H_lecture.Instance.Dock = DockStyle.Fill;
+            PnlContainer.Controls.Add(H_lecture.Instance);
+            H_lecture.Instance.BringToFront();
+            btnBack.Visible = false;
+            //This will display the UCHome back*/
+
+            /*panelContainer.Controls["Add_Lecturer"].BringToFront();
+            btnBack.Visible = false;
+            //This will display the UCHome back*/
+        }
+
+        private void btnLecturer_Click(object sender, EventArgs e)
+        {
             btnBack.Visible = true;
 
-            /*if (!H_lecture.Instance.PnlContainer.Controls.ContainsKey("Addlec"))
+            /*if (!H_lecture.Instance.PnlContainer.Controls.ContainsKey("Add_Lecturer"))
             {
-                H_lecture un = new H_lecture();
+                Add_Lecturer un = new Add_Lecturer();
                 un.Dock = DockStyle.Fill;
                 H_lecture.Instance.PnlContainer.Controls.Add(un);
             }
-            H_lecture.Instance.PnlContainer.Controls["Addlec"].BringToFront();
-            H_lecture.Instance.BackButton.Visible = true;*/
+            H_lecture.Instance.PnlContainer.Controls["Add_Lecturer"].BringToFront();
+            H_lecture.Instance.BackButton.Visible = true;//*/
 
-            if (!PnlContainer.Controls.Contains(Add_Lecturer.Instance))
+            if (!PnlContainer.Controls.Contains(Show_Lecturer.Instance))
             {
                 H_lecture.Instance.Dock = DockStyle.None;
-                PnlContainer.Controls.Add(Add_Lecturer.Instance);
-                Add_Lecturer.Instance.Dock = DockStyle.Fill;
-                Add_Lecturer.Instance.BringToFront();
+                PnlContainer.Controls.Add(Show_Lecturer.Instance);
+                Show_Lecturer.Instance.Dock = DockStyle.Fill;
+                Show_Lecturer.Instance.BringToFront();
+                
             }
             else
             {
-                Add_Lecturer.Instance.BringToFront();
-            }
-            
-        }
+                /*panelContainer.Controls.Clear();
+                Add_Lecturer.Instance.Dock = DockStyle.Fill;
+                PnlContainer.Controls.Add(Add_Lecturer.Instance);
+                Add_Lecturer.Instance.BringToFront();//*/
 
-        /*btnAddLecture.Visible = false;
+                Show_Lecturer.Instance.BringToFront();
+
+                //Add_Lecturer.Instance.BringToFront();
+            }//*/
+
+            /*btnAddLecture.Visible = false;
             label1.Visible = false;
             btnBack.Visible = true;
             
@@ -83,16 +112,6 @@ namespace app.Forms.Control
             addlec.Dock = DockStyle.Fill;
             panelContainer.Controls.Add(addlec);
             //This will display add lecturer when form loads*/
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            
-            Add_Lecturer.Instance.Dock = DockStyle.None;
-            PnlContainer.Controls.Add(H_lecture.Instance);
-            H_lecture.Instance.Dock = DockStyle.Fill;
-            H_lecture.Instance.BringToFront();
-            btnBack.Visible = false;
-            //This will display the UCHome back
         }
     }
 }

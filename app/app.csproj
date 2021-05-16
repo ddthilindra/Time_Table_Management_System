@@ -64,8 +64,14 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
       <HintPath>..\..\..\..\Desktop\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
+      <HintPath>..\..\..\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton">
       <HintPath>..\..\..\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
+      <HintPath>..\..\..\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
@@ -73,16 +79,21 @@
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Desktop\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
     <Reference Include="SLRDbConnector">
       <HintPath>..\..\..\..\Documents\SLRDbConnector.dll</HintPath>
     </Reference>
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
+    <Reference Include="System.Drawing.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -92,14 +103,10 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\Lecturer\Add_Lecturer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Lecturer\Add_Lecturer.Designer.cs">
-      <DependentUpon>Add_Lecturer.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ClassLecturer.cs" />
     <Compile Include="Forms\Control\H_lecture.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -148,17 +155,56 @@
     <Compile Include="Forms\Control\Home_User.Designer.cs">
       <DependentUpon>Home_User.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Lecturer\Add_Lecturer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Lecturer\Add_Lecturer.Designer.cs">
+      <DependentUpon>Add_Lecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lecturer\Add_Session.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Lecturer\Add_Session.Designer.cs">
+      <DependentUpon>Add_Session.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Lecturer\Add_Subject.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\Lecturer\Add_Subject.Designer.cs">
       <DependentUpon>Add_Subject.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Lecturer\Show_Lecturer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Lecturer\Show_Lecturer.Designer.cs">
+      <DependentUpon>Show_Lecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lecturer\Show_Session.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Lecturer\Show_Session.Designer.cs">
+      <DependentUpon>Show_Session.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lecturer\Show_Subject.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Lecturer\Show_Subject.Designer.cs">
+      <DependentUpon>Show_Subject.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Lecturer\Update_Lecturer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Lecturer\Update_Lecturer.Designer.cs">
+      <DependentUpon>Update_Lecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Add_Student.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\Add_Student.Designer.cs">
+      <DependentUpon>Add_Student.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Forms\Lecturer\Add_Lecturer.resx">
-      <DependentUpon>Add_Lecturer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Control\H_lecture.resx">
       <DependentUpon>H_lecture.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,8 +229,29 @@
     <EmbeddedResource Include="Forms\Control\Home_User.resx">
       <DependentUpon>Home_User.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lecturer\Add_Lecturer.resx">
+      <DependentUpon>Add_Lecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lecturer\Add_Session.resx">
+      <DependentUpon>Add_Session.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Lecturer\Add_Subject.resx">
       <DependentUpon>Add_Subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lecturer\Show_Lecturer.resx">
+      <DependentUpon>Show_Lecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lecturer\Show_Session.resx">
+      <DependentUpon>Show_Session.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lecturer\Show_Subject.resx">
+      <DependentUpon>Show_Subject.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Lecturer\Update_Lecturer.resx">
+      <DependentUpon>Update_Lecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Add_Student.resx">
+      <DependentUpon>Add_Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -235,6 +302,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Class\Lecturer\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

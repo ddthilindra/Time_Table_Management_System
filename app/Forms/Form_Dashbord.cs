@@ -15,6 +15,11 @@ namespace app.Forms
     {
         public Form_Dashbord()
         {
+            //make a header dragable
+
+            //bunifuFormDock1.SubscribeControlsToDragEvents(panel1);
+            
+
             InitializeComponent();
         }
 
@@ -36,10 +41,18 @@ namespace app.Forms
             uc.BringToFront();
         }
 
+        private void moveImageBox (object sender)
+        {
+            
+        }
         private void btnLecture_Click(object sender, EventArgs e)
         {
-            //indicator.Visible = true;
-            indicator.Top = btnLecture.Top;
+            indicator.Visible = true;
+
+            indicator.Location = new Point(btnLecture.Location.X + 200, btnLecture.Location.Y - 33);
+            btnLecture.SendToBack();
+
+            //indicator.Top = btnLecture.Top;
 
             H_lecture lec = new H_lecture();
             addControl(lec);
@@ -50,8 +63,12 @@ namespace app.Forms
             H_student std = new H_student();
             addControl(std);
 
-            //indicator.Visible = true;
-            indicator.Top = btnStudent.Top;
+            indicator.Visible = true;
+
+            indicator.Location = new Point(btnStudent.Location.X + 200, btnStudent.Location.Y - 33);
+            btnStudent.SendToBack();
+
+            //indicator.Top = btnStudent.Top;
         }
 
         private void bunifuButton5_Click(object sender, EventArgs e)
@@ -59,8 +76,12 @@ namespace app.Forms
             H_location loc = new H_location();
             addControl(loc);
 
-            //indicator.Visible = true;
-            indicator.Top = btnLocation.Top;
+            indicator.Visible = true;
+
+            indicator.Location = new Point(btnLocation.Location.X + 200, btnLocation.Location.Y - 33);
+            btnLocation.SendToBack();
+
+            //indicator.Top = btnLocation.Top;
         }
 
         private void bunifuButton4_Click(object sender, EventArgs e)
@@ -68,14 +89,27 @@ namespace app.Forms
             H_timeTable tmtb = new H_timeTable();
             addControl(tmtb);
 
-            //indicator.Visible = true;
-            indicator.Top = btnTimeTable.Top;
+            indicator.Visible = true;
+
+            indicator.Location = new Point(btnTimeTable.Location.X + 200, btnTimeTable.Location.Y - 33);
+            btnTimeTable.SendToBack();
+
+            //indicator.Top = btnTimeTable.Top;
         }
 
         private void bunifuButton6_Click(object sender, EventArgs e)
         {
-           //indicator.Visible = true;
-            indicator.Top = btnOther.Top;
+            indicator.Visible = true;
+
+            indicator.Location = new Point(btnOther.Location.X + 200, btnOther.Location.Y - 33);
+            btnOther.SendToBack();
+
+            //indicator.Top = btnOther.Top;
+        }
+
+        private void indicator_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
