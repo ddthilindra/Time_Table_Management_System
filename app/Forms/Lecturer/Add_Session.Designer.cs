@@ -49,10 +49,10 @@
             this.bunifuDropdown4 = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuDropdown3 = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuDropdown6 = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuDropdown7 = new Bunifu.Framework.UI.BunifuDropdown();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.bunifuDropdown7 = new Bunifu.Framework.UI.BunifuDropdown();
             this.label8 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.bunifuDropdown9 = new Bunifu.Framework.UI.BunifuDropdown();
@@ -200,22 +200,6 @@
             this.bunifuDropdown6.Size = new System.Drawing.Size(240, 37);
             this.bunifuDropdown6.TabIndex = 20;
             // 
-            // bunifuDropdown7
-            // 
-            this.bunifuDropdown7.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown7.BorderRadius = 3;
-            this.bunifuDropdown7.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDropdown7.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown7.items = new string[0];
-            this.bunifuDropdown7.Location = new System.Drawing.Point(236, 335);
-            this.bunifuDropdown7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.bunifuDropdown7.Name = "bunifuDropdown7";
-            this.bunifuDropdown7.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.bunifuDropdown7.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.bunifuDropdown7.selectedIndex = -1;
-            this.bunifuDropdown7.Size = new System.Drawing.Size(240, 37);
-            this.bunifuDropdown7.TabIndex = 20;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -245,6 +229,22 @@
             this.label5.Size = new System.Drawing.Size(190, 30);
             this.label5.TabIndex = 17;
             this.label5.Text = "Lecturer Name";
+            // 
+            // bunifuDropdown7
+            // 
+            this.bunifuDropdown7.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuDropdown7.BorderRadius = 3;
+            this.bunifuDropdown7.DisabledColor = System.Drawing.Color.Gray;
+            this.bunifuDropdown7.ForeColor = System.Drawing.Color.Black;
+            this.bunifuDropdown7.items = new string[0];
+            this.bunifuDropdown7.Location = new System.Drawing.Point(236, 335);
+            this.bunifuDropdown7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.bunifuDropdown7.Name = "bunifuDropdown7";
+            this.bunifuDropdown7.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.bunifuDropdown7.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.bunifuDropdown7.selectedIndex = -1;
+            this.bunifuDropdown7.Size = new System.Drawing.Size(240, 37);
+            this.bunifuDropdown7.TabIndex = 20;
             // 
             // label8
             // 

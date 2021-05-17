@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using app.Class.Lecturer;
 
 namespace app.Forms.Lecturer
 {
     public partial class Show_Subject : UserControl
     {
+        ClassSubject s = new ClassSubject();
+
         static Show_Subject _obj;
 
         public static Show_Subject Instance
@@ -38,126 +41,24 @@ namespace app.Forms.Lecturer
 
         private void Show_Subject_Load(object sender, EventArgs e)
         {
-            lecTbl.Rows.Add(
-                new object[]
-                {
-                    001,
-                    "OOC",
-                    "IT3010",
-                    "Y1",
-                    "S1"
+            DataTable dt = s.selectLecturer();
+            tblSub.DataSource = dt;
 
-                }
-                );
+            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
+            btn.HeaderText = "";
+            btn.Text = "Edit";
+            btn.DefaultCellStyle.ForeColor = Color.Red;
+            btn.DefaultCellStyle.BackColor = Color.Beige;
+            btn.UseColumnTextForButtonValue = true;
+            tblSub.Columns.Add(btn);
 
-            lecTbl.Rows.Add(
-                new object[]
-                {
-                    002,
-                    "Paf",
-                    "IT2020",
-                    "Y1",
-                    "S1"
-
-                }
-                );
-            lecTbl.Rows.Add(
-                            new object[]
-                            {
-                    003,
-                    "IWT",
-                    "IT3010",
-                    "Y2",
-                    "S2"
-
-                            }
-                            );
-            lecTbl.Rows.Add(
-                            new object[]
-                            {
-
-                                004,
-                    "PS",
-                    "IT3040",
-                    "Y1",
-                    "S1"
-
-                            }
-                            );
-            lecTbl.Rows.Add(
-                            new object[]
-                            {
-
-                     005,
-                    "MAD",
-                    "IT3010",
-                    "Y2",
-                    "S1"
-
-                            }
-                            );
-            lecTbl.Rows.Add(
-                            new object[]
-                            {
-                    006,
-                    "ESD",
-                    "IT3010",
-                    "Y3",
-                    "S1"
-
-                            }
-                            );
-            lecTbl.Rows.Add(
-                            new object[]
-                            {
-                    007,
-                    "MAC",
-                    "IT3010",
-                    "Y4",
-                    "S1"
-
-                            }
-
-                            );
-
-            lecTbl.Rows.Add(
-                            new object[]
-                            {
-                    008,
-                    "OOC",
-                    "IT3010",
-                    "Y1",
-                    "S1"
-
-                            }
-
-                            );
-
-            lecTbl.Rows.Add(
-                            new object[]
-                            {
-                    001,
-                    "Kanchana K",
-                    "",
-                    "IT3010",
-                    "OOC"
-
-                            }
-
-                            );
-
-            lecTbl.Rows.Add(
-                            new object[]
-                            {
-                    001,
-                    "Kanchana K",
-                    "",
-                    "IT3010",
-                    "OOC"
-
-                            }
-
-                            );
+            //Creaing Delete button in gridview
+            DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
+            btn2.HeaderText = "";
+            btn2.Text = "Delete";
+            btn2.DefaultCellStyle.BackColor = SystemColors.WindowFrame;
+            btn2.UseColumnTextForButtonValue = true;
+            tblSub.Columns.Add(btn2);
         }
     }
 }

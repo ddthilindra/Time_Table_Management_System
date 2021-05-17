@@ -29,13 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties7 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties8 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties9 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties stateProperties10 = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
@@ -45,11 +42,11 @@
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.lecSch = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
-            this.btnSearch = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
+            this.txtLecSch = new Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox();
             this.bunifuButton3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.btnAddLecture = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -58,13 +55,16 @@
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.lecTbl = new System.Windows.Forms.DataGridView();
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.lecTbl)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,141 +73,80 @@
             this.bunifuElipse1.ElipseRadius = 15;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // lecSch
+            // txtLecSch
             // 
-            this.lecSch.AcceptsReturn = false;
-            this.lecSch.AcceptsTab = false;
-            this.lecSch.AnimationSpeed = 200;
-            this.lecSch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.lecSch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.lecSch.BackColor = System.Drawing.Color.Transparent;
-            this.lecSch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("lecSch.BackgroundImage")));
-            this.lecSch.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.lecSch.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
-            this.lecSch.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.lecSch.BorderColorIdle = System.Drawing.Color.Silver;
-            this.lecSch.BorderRadius = 35;
-            this.lecSch.BorderThickness = 1;
-            this.lecSch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.lecSch.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.lecSch.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.lecSch.DefaultText = "";
-            this.lecSch.FillColor = System.Drawing.Color.White;
-            this.lecSch.HideSelection = true;
-            this.lecSch.IconLeft = null;
-            this.lecSch.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.lecSch.IconPadding = 10;
-            this.lecSch.IconRight = null;
-            this.lecSch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.lecSch.Lines = new string[0];
-            this.lecSch.Location = new System.Drawing.Point(47, 22);
-            this.lecSch.MaxLength = 32767;
-            this.lecSch.MinimumSize = new System.Drawing.Size(100, 35);
-            this.lecSch.Modified = false;
-            this.lecSch.Multiline = false;
-            this.lecSch.Name = "lecSch";
+            this.txtLecSch.AcceptsReturn = false;
+            this.txtLecSch.AcceptsTab = false;
+            this.txtLecSch.AnimationSpeed = 200;
+            this.txtLecSch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtLecSch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtLecSch.BackColor = System.Drawing.Color.Transparent;
+            this.txtLecSch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtLecSch.BackgroundImage")));
+            this.txtLecSch.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtLecSch.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(161)))), ((int)(((byte)(161)))), ((int)(((byte)(161)))));
+            this.txtLecSch.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txtLecSch.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtLecSch.BorderRadius = 35;
+            this.txtLecSch.BorderThickness = 1;
+            this.txtLecSch.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtLecSch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLecSch.DefaultFont = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
+            this.txtLecSch.DefaultText = "";
+            this.txtLecSch.FillColor = System.Drawing.Color.White;
+            this.txtLecSch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtLecSch.HideSelection = true;
+            this.txtLecSch.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtLecSch.IconLeft")));
+            this.txtLecSch.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLecSch.IconPadding = 5;
+            this.txtLecSch.IconRight = null;
+            this.txtLecSch.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLecSch.Lines = new string[0];
+            this.txtLecSch.Location = new System.Drawing.Point(47, 3);
+            this.txtLecSch.MaxLength = 32767;
+            this.txtLecSch.MinimumSize = new System.Drawing.Size(100, 35);
+            this.txtLecSch.Modified = false;
+            this.txtLecSch.Multiline = false;
+            this.txtLecSch.Name = "txtLecSch";
+            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            stateProperties5.FillColor = System.Drawing.Color.Empty;
+            stateProperties5.ForeColor = System.Drawing.Color.Empty;
+            stateProperties5.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtLecSch.OnActiveState = stateProperties5;
+            stateProperties6.BorderColor = System.Drawing.Color.Empty;
+            stateProperties6.FillColor = System.Drawing.Color.White;
+            stateProperties6.ForeColor = System.Drawing.Color.Empty;
+            stateProperties6.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtLecSch.OnDisabledState = stateProperties6;
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             stateProperties7.FillColor = System.Drawing.Color.Empty;
             stateProperties7.ForeColor = System.Drawing.Color.Empty;
             stateProperties7.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.lecSch.OnActiveState = stateProperties7;
-            stateProperties8.BorderColor = System.Drawing.Color.Empty;
+            this.txtLecSch.OnHoverState = stateProperties7;
+            stateProperties8.BorderColor = System.Drawing.Color.Silver;
             stateProperties8.FillColor = System.Drawing.Color.White;
-            stateProperties8.ForeColor = System.Drawing.Color.Empty;
-            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Silver;
-            this.lecSch.OnDisabledState = stateProperties8;
-            stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties9.FillColor = System.Drawing.Color.Empty;
-            stateProperties9.ForeColor = System.Drawing.Color.Empty;
-            stateProperties9.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.lecSch.OnHoverState = stateProperties9;
-            stateProperties10.BorderColor = System.Drawing.Color.Silver;
-            stateProperties10.FillColor = System.Drawing.Color.White;
-            stateProperties10.ForeColor = System.Drawing.Color.Empty;
-            stateProperties10.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.lecSch.OnIdleState = stateProperties10;
-            this.lecSch.PasswordChar = '\0';
-            this.lecSch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.lecSch.PlaceholderText = "Search";
-            this.lecSch.ReadOnly = false;
-            this.lecSch.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.lecSch.SelectedText = "";
-            this.lecSch.SelectionLength = 0;
-            this.lecSch.SelectionStart = 0;
-            this.lecSch.ShortcutsEnabled = true;
-            this.lecSch.Size = new System.Drawing.Size(200, 35);
-            this.lecSch.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
-            this.lecSch.TabIndex = 1;
-            this.lecSch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.lecSch.TextMarginBottom = 0;
-            this.lecSch.TextMarginLeft = 5;
-            this.lecSch.TextMarginTop = 0;
-            this.lecSch.TextPlaceholder = "Search";
-            this.lecSch.UseSystemPasswordChar = false;
-            this.lecSch.WordWrap = true;
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.AllowToggling = false;
-            this.btnSearch.AnimationSpeed = 200;
-            this.btnSearch.AutoGenerateColors = false;
-            this.btnSearch.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearch.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnSearch.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.BackgroundImage")));
-            this.btnSearch.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSearch.ButtonText = "";
-            this.btnSearch.ButtonTextMarginLeft = 0;
-            this.btnSearch.ColorContrastOnClick = 45;
-            this.btnSearch.ColorContrastOnHover = 45;
-            this.btnSearch.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnSearch.CustomizableEdges = borderEdges3;
-            this.btnSearch.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSearch.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btnSearch.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnSearch.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnSearch.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnSearch.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F);
-            this.btnSearch.ForeColor = System.Drawing.Color.White;
-            this.btnSearch.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.IconMarginLeft = 11;
-            this.btnSearch.IconPadding = 10;
-            this.btnSearch.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearch.IdleBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnSearch.IdleBorderRadius = 25;
-            this.btnSearch.IdleBorderThickness = 1;
-            this.btnSearch.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnSearch.IdleIconLeftImage = ((System.Drawing.Image)(resources.GetObject("btnSearch.IdleIconLeftImage")));
-            this.btnSearch.IdleIconRightImage = null;
-            this.btnSearch.IndicateFocus = false;
-            this.btnSearch.Location = new System.Drawing.Point(269, 22);
-            this.btnSearch.Name = "btnSearch";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties5.BorderRadius = 25;
-            stateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties5.BorderThickness = 1;
-            stateProperties5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            stateProperties5.ForeColor = System.Drawing.Color.White;
-            stateProperties5.IconLeftImage = null;
-            stateProperties5.IconRightImage = null;
-            this.btnSearch.onHoverState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties6.BorderRadius = 25;
-            stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties6.BorderThickness = 1;
-            stateProperties6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            stateProperties6.ForeColor = System.Drawing.Color.White;
-            stateProperties6.IconLeftImage = null;
-            stateProperties6.IconRightImage = null;
-            this.btnSearch.OnPressedState = stateProperties6;
-            this.btnSearch.Size = new System.Drawing.Size(43, 35);
-            this.btnSearch.TabIndex = 2;
-            this.btnSearch.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearch.TextMarginLeft = 0;
-            this.btnSearch.UseDefaultRadiusAndThickness = true;
+            stateProperties8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtLecSch.OnIdleState = stateProperties8;
+            this.txtLecSch.PasswordChar = '\0';
+            this.txtLecSch.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.txtLecSch.PlaceholderText = "Search";
+            this.txtLecSch.ReadOnly = false;
+            this.txtLecSch.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtLecSch.SelectedText = "";
+            this.txtLecSch.SelectionLength = 0;
+            this.txtLecSch.SelectionStart = 0;
+            this.txtLecSch.ShortcutsEnabled = true;
+            this.txtLecSch.Size = new System.Drawing.Size(219, 37);
+            this.txtLecSch.Style = Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox._Style.Bunifu;
+            this.txtLecSch.TabIndex = 1;
+            this.txtLecSch.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtLecSch.TextMarginBottom = 0;
+            this.txtLecSch.TextMarginLeft = 5;
+            this.txtLecSch.TextMarginTop = 0;
+            this.txtLecSch.TextPlaceholder = "Search";
+            this.txtLecSch.UseSystemPasswordChar = false;
+            this.txtLecSch.WordWrap = true;
+            this.txtLecSch.TextChange += new System.EventHandler(this.lecSch_TextChange);
             // 
             // bunifuButton3
             // 
@@ -314,7 +253,7 @@
             this.btnAddLecture.IdleIconLeftImage = null;
             this.btnAddLecture.IdleIconRightImage = null;
             this.btnAddLecture.IndicateFocus = true;
-            this.btnAddLecture.Location = new System.Drawing.Point(872, 513);
+            this.btnAddLecture.Location = new System.Drawing.Point(872, 577);
             this.btnAddLecture.Name = "btnAddLecture";
             stateProperties1.BorderColor = System.Drawing.Color.White;
             stateProperties1.BorderRadius = 45;
@@ -345,7 +284,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(938, 20);
+            this.label7.Location = new System.Drawing.Point(938, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(134, 37);
             this.label7.TabIndex = 9;
@@ -369,9 +308,11 @@
             this.lecTbl.AllowUserToDeleteRows = false;
             this.lecTbl.AllowUserToResizeColumns = false;
             this.lecTbl.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.MenuText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
             this.lecTbl.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.lecTbl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -382,7 +323,7 @@
             this.lecTbl.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
@@ -391,34 +332,42 @@
             this.lecTbl.ColumnHeadersHeight = 40;
             this.lecTbl.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.lecTbl.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
             this.Column9,
             this.Column10,
             this.Column11,
             this.Column12,
             this.Column13,
             this.Column14,
-            this.Column15});
+            this.Column15,
+            this.Column1,
+            this.Column2});
             this.lecTbl.EnableHeadersVisualStyles = false;
-            this.lecTbl.Location = new System.Drawing.Point(47, 81);
+            this.lecTbl.GridColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lecTbl.Location = new System.Drawing.Point(47, 55);
             this.lecTbl.Name = "lecTbl";
             this.lecTbl.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Calibri", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.lecTbl.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.lecTbl.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.lecTbl.RowHeadersVisible = false;
             this.lecTbl.RowHeadersWidth = 51;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
-            this.lecTbl.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.MenuText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ControlDarkDark;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.White;
+            this.lecTbl.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.lecTbl.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lecTbl.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Silver;
             this.lecTbl.RowTemplate.Height = 50;
             this.lecTbl.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.lecTbl.Size = new System.Drawing.Size(1025, 402);
+            this.lecTbl.Size = new System.Drawing.Size(1025, 512);
             this.lecTbl.TabIndex = 92;
             this.lecTbl.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.lecTbl_CellClick);
             // 
@@ -427,45 +376,24 @@
             this.bunifuElipse4.ElipseRadius = 15;
             this.bunifuElipse4.TargetControl = this.lecTbl;
             // 
-            // Column15
+            // Id
             // 
-            this.Column15.DataPropertyName = "Level";
-            this.Column15.HeaderText = "Level";
-            this.Column15.MinimumWidth = 6;
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Index";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
             // 
-            // Column14
+            // Column9
             // 
-            this.Column14.DataPropertyName = "Building";
-            this.Column14.HeaderText = "Building";
-            this.Column14.MinimumWidth = 6;
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.DataPropertyName = "Center";
-            this.Column13.HeaderText = "Center";
-            this.Column13.MinimumWidth = 6;
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.DataPropertyName = "Department";
-            this.Column12.HeaderText = "Department";
-            this.Column12.MinimumWidth = 6;
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.DataPropertyName = "Faculty";
-            this.Column11.HeaderText = "Faculty";
-            this.Column11.MinimumWidth = 6;
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
+            this.Column9.DataPropertyName = "Lecturerid";
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column9.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column9.HeaderText = "Lecturer ID";
+            this.Column9.MinimumWidth = 6;
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
             // 
             // Column10
             // 
@@ -475,13 +403,61 @@
             this.Column10.Name = "Column10";
             this.Column10.ReadOnly = true;
             // 
-            // Column9
+            // Column11
             // 
-            this.Column9.DataPropertyName = "Lecturerid";
-            this.Column9.HeaderText = "Lecturer ID";
-            this.Column9.MinimumWidth = 6;
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
+            this.Column11.DataPropertyName = "Faculty";
+            this.Column11.HeaderText = "Faculty";
+            this.Column11.MinimumWidth = 6;
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "Department";
+            this.Column12.HeaderText = "Department";
+            this.Column12.MinimumWidth = 6;
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "Center";
+            this.Column13.HeaderText = "Center";
+            this.Column13.MinimumWidth = 6;
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "Building";
+            this.Column14.HeaderText = "Building";
+            this.Column14.MinimumWidth = 6;
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column15
+            // 
+            this.Column15.DataPropertyName = "Level";
+            this.Column15.HeaderText = "Level";
+            this.Column15.MinimumWidth = 6;
+            this.Column15.Name = "Column15";
+            this.Column15.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "WD";
+            this.Column1.HeaderText = "WorkiD";
+            this.Column1.MinimumWidth = 6;
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "WH";
+            this.Column2.HeaderText = "WorkiH";
+            this.Column2.MinimumWidth = 6;
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
             // Show_Lecturer
             // 
@@ -491,10 +467,9 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.btnAddLecture);
             this.Controls.Add(this.bunifuButton3);
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.lecSch);
+            this.Controls.Add(this.txtLecSch);
             this.Name = "Show_Lecturer";
-            this.Size = new System.Drawing.Size(1127, 603);
+            this.Size = new System.Drawing.Size(1127, 647);
             this.Load += new System.EventHandler(this.Show_Lecturer_Load);
             ((System.ComponentModel.ISupportInitialize)(this.lecTbl)).EndInit();
             this.ResumeLayout(false);
@@ -505,8 +480,7 @@
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox lecSch;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSearch;
+        private Bunifu.UI.WinForms.BunifuTextbox.BunifuTextBox txtLecSch;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton3;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse2;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnAddLecture;
@@ -515,6 +489,7 @@
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse3;
         private System.Windows.Forms.DataGridView lecTbl;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
@@ -522,5 +497,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

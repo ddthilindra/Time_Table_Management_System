@@ -113,5 +113,35 @@ namespace app.Forms.Control
             panelContainer.Controls.Add(addlec);
             //This will display add lecturer when form loads*/
         }
+
+        private void btnSubject_Click(object sender, EventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Show_Subject.Instance))
+            {
+                H_lecture.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Show_Subject.Instance);
+                Show_Subject.Instance.Dock = DockStyle.Fill;
+                Show_Subject.Instance.BringToFront();
+            }
+            else
+            {
+                Show_Subject.Instance.BringToFront();
+            }
+        }
+
+        private void bunifuButton1_Click(object sender, EventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Show_Session.Instance))
+            {
+                H_lecture.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Show_Session.Instance);
+                Show_Session.Instance.Dock = DockStyle.Fill;
+                Show_Session.Instance.BringToFront();
+            }
+            else
+            {
+                Show_Session.Instance.BringToFront();
+            }
+        }
     }
 }
