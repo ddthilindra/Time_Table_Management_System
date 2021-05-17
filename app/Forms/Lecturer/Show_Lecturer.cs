@@ -87,10 +87,13 @@ namespace app.Forms.Lecturer
         {
             if(e.ColumnIndex==0)
             {
-                //Edit Record
+                //Edit Record Button
+
                 form.clear();           //clear form data in addlecturer form
+
+                //Add table value to update form
                 form.id= lecTbl.Rows[e.RowIndex].Cells[2].Value.ToString();
-                form.lecid = lecTbl.Rows[e.RowIndex].Cells[3].Value.ToString();     //Add table value to update form
+                form.lecid = lecTbl.Rows[e.RowIndex].Cells[3].Value.ToString();
                 form.lecName= lecTbl.Rows[e.RowIndex].Cells[4].Value.ToString();
                 form.lecFaculty =lecTbl.Rows[e.RowIndex].Cells[5].Value.ToString();
                 form.lecDepartment = lecTbl.Rows[e.RowIndex].Cells[6].Value.ToString();
@@ -102,6 +105,7 @@ namespace app.Forms.Lecturer
 
                 form.updateLecInfo();   //Call updateLecInfo methord to change form spesific content
                 form.ShowDialog();
+
                 DataTable dt = c.selectLecturer();
                 lecTbl.DataSource = dt;
 
@@ -109,7 +113,7 @@ namespace app.Forms.Lecturer
             }
             if(e.ColumnIndex==1)
             {
-                //Delete Record
+                //Delete Record Button
 
                 if(MessageBox.Show("Are you want to delete Lecturer record", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
                 {
@@ -127,6 +131,7 @@ namespace app.Forms.Lecturer
         //DB connection
         static string myconstr = System.Configuration.ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
 
+        //Method to Search data in table
         private void lecSch_TextChange(object sender, EventArgs e)
         {
             string keyword = txtLecSch.Text;
@@ -140,7 +145,7 @@ namespace app.Forms.Lecturer
             {
                 //Select query
                 con.Open();
-                SqlDataAdapter adapter = new SqlDataAdapter("SELECT Id,Lecturerid,Name,Faculty,Department,Center,Building,Level FROM Lecturer WHERE Lecturerid LIKE'%" + keyword + "%' OR Name LIKE'%" + keyword + "%'", con);
+                SqlDataAdapter adapter = new SqlDataAdapter("SELECT Id,Lecturerid,Name,Faculty,Department,Center,Building,Level,WD,WH FROM Lecturer WHERE Lecturerid LIKE'%" + keyword + "%' OR Name LIKE'%" + keyword + "%'", con);
 
                 adapter.Fill(dt);
 
@@ -154,6 +159,13 @@ namespace app.Forms.Lecturer
             {
                 con.Close();
             }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            //load lecturer table to gridview
+            DataTable dt = c.selectLecturer();
+            lecTbl.DataSource = dt;
         }
     }
 }

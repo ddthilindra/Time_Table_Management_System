@@ -201,7 +201,7 @@ namespace app
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                MessageBox.Show("Delete Faild", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Exception Called : " + ex + "", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
@@ -210,7 +210,8 @@ namespace app
             return isSuccess;
         }
 
-        public bool user(string id)
+        //Methord to check lecturer id alredy in database
+        public bool chkLecID(string lecid)
         {
             //Creating a deult return type and setting its value to false
             bool isSuccess = false;
@@ -219,33 +220,41 @@ namespace app
 
             try
             {
-                //Delete query
-                String sql = "SELECT Lecturerid FROM Lecturer WHERE Lecturerid=@uid";
+                //Select query to find the lecturer id
+                String sql = "SELECT * FROM Lecturer WHERE LecturerID=@id";
 
                 SqlCommand cmd = new SqlCommand(sql, con);
 
                 //Create parameter to ad data
-                cmd.Parameters.AddWithValue("@uid", id);
+                cmd.Parameters.AddWithValue("@id", lecid);
 
                 con.Open();
 
                 int rows = cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Class Called "+id+"", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //Creating sql data reader Lecturer ID already exist
+                SqlDataReader dr = cmd.ExecuteReader();
 
-                if (rows > 0)
+                //if dataset has rows show the 
+                if (dr.HasRows)
                 {
-                    isSuccess = true;
-                }
+                    while (dr.Read())
+                    {
+                        MessageBox.Show("Lecturer ID already exist !\n\nPlease update Lecturer profile or Add another Lecturer ID" + dr.GetValue(1).ToString() + "", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Error);                        
+                    }
+                }                    
                 else
                 {
-                    isSuccess = false;
+                    dr.Close();
+                                        
+                    isSuccess = true;//Lecturer ID not in table
                 }
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex);
-                MessageBox.Show("Delete Faild", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Exception Called : "+ex+"", "Exception", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {
