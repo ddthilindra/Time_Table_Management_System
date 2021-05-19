@@ -15,11 +15,13 @@ namespace app.Forms.Lecturer
 {
     public partial class Add_Lecturer : Form
     {
-        //Creating object from this Show_Lecturer to access this form in main menu
+        //Create new object from ClassLecturer class
         ClassLecturer c = new ClassLecturer();
 
+        //Creating object from this Show_Lecturer to access this form in main menu
         Show_Lecturer form;
 
+        //Create new object to get access for navigation button
         static Add_Lecturer _obj;
 
         public static Add_Lecturer Instance
@@ -35,13 +37,7 @@ namespace app.Forms.Lecturer
         }
 
         //Creating variable to set the table value to form
-        public string id, lecid, lecName, lecCenter, lecFaculty, lecDepartment, lecBuilding, lecLevel, lecWD, lecWH, lecRank;
-
-        //Method to change addlecturer form content
-        public void updateLecInfo()
-        {
-            btnAddLecSub.Text = "Update";            
-        }
+        public string id, lecid, lecName, lecCenter, lecFaculty, lecDepartment, lecBuilding, lecLevel, lecWD, lecWH, lecRank,setLevel;
 
         //Call Connection string get database info
         static string myconstr = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
@@ -52,8 +48,9 @@ namespace app.Forms.Lecturer
         public Add_Lecturer()
         {
             InitializeComponent();
-        }        
+        }
 
+        //Method for submit the add & update Lecturer form
         private void btnAddLecSub_Click(object sender, EventArgs e)
         {
             //get value from input field
@@ -63,16 +60,17 @@ namespace app.Forms.Lecturer
             c.Faculty = ddFaculty.Text.Trim();
             c.Center = ddCenter.Text.Trim();
             c.Department = ddDepartment.Text.Trim();
-            c.Level = ddLevel.Text.Trim();
+            c.Level = setLevel;
             c.Building = ddBuilding.Text.Trim();
             c.WorkingDay = ddWorkingD.Text.Trim();
             c.WorkingHours = ddWorkingH.Text.Trim();
             c.Rank = rankOut.Text;
 
-            //Set changed botton of text to submit text if addlecturer form change to update form
+            //Submit the add lecturer form
             if (btnAddLecSub.Text == "Submit")
             {
                 //call chkLecID method (check lecturer id alredy in db)
+                
                 bool exist = c.chkLecID(txtLecturerId.Text.Trim());
 
                 if (exist == false)
@@ -80,19 +78,19 @@ namespace app.Forms.Lecturer
                     rankOut.Text = "";        //if alredy exist set the genarated id is empty
                     btnAddLecSub.Visible = false;       //Create one time click button
                 }
-                    
+
                 //inserting data in to database using insertLecturer method
-                if (exist== true)
+                if (exist == true)
                 {
                     bool success = c.insertLecturer(c);
 
                     if (success == true)
                     {
-                        MessageBox.Show("Successfully Inserted", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Lecturer was added Successfully", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Insert Failed", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Somthing went Worng!\n\nCannot insert the value!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
 
                     btnAddLecSub.Visible = false;       //Create one time click button
@@ -100,6 +98,7 @@ namespace app.Forms.Lecturer
 
             }
 
+            //Submit the update lecturer form
             if (btnAddLecSub.Text == "Update")
             {
                 //inserting data in to database using insertLecturer method
@@ -107,7 +106,8 @@ namespace app.Forms.Lecturer
 
                 if (success == true)
                 {
-                    MessageBox.Show("Successfully Updated", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Update successful", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
                 }
                 else
                 {
@@ -119,57 +119,56 @@ namespace app.Forms.Lecturer
 
         }
 
-        //Method to Set changed botton of text to submit text
-        public void addLecInfo()
-        {
-            lblAddLec.Text = "Add Lecturer";
-            btnAddLecSub.Text = "Submit";
-        }
-
-        //Method to genarate the rank
+        //Method to genarate the lecurer rank
         private void btnGenRank_Click(object sender, EventArgs e)
         {
             if (isformValid())
             {
                 string level = ddLevel.Text.Trim();
                 string id = txtLecturerId.Text;
-                rankOut.Font = new Font(rankOut.Font,FontStyle.Bold);
-                rankOut.ForeColor= SystemColors.ControlText;
+                rankOut.Font = new Font(rankOut.Font, FontStyle.Bold);
+                rankOut.ForeColor = SystemColors.ControlText;
                 if (level == "Professor")
                 {
+                    setLevel = "1";
                     rankOut.Text = 1 + "." + id;
                 }
                 else if (level == "Assistant Professor")
                 {
+                    setLevel = "2";
                     rankOut.Text = 2 + "." + id;
                 }
                 else if (level == "Senior Lecturer(HG)")
                 {
+                    setLevel = "3";
                     rankOut.Text = 3 + "." + id;
                 }
                 else if (level == "Senior Lecturer")
                 {
+                    setLevel = "4";
                     rankOut.Text = 4 + "." + id;
                 }
                 else if (level == "Lecturer")
                 {
+                    setLevel = "5";
                     rankOut.Text = 5 + "." + id;
                 }
                 else if (level == "Assistant Lecturer")
                 {
+                    setLevel = "6";
                     rankOut.Text = 6 + "." + id;
                 }
                 //If click genarate button submit button will be visible otherwise not visible
-                btnAddLecSub.Visible = true;    
+                btnAddLecSub.Visible = true;
             }
         }
 
-        //Method to check form input are filled
+        //Method to form validation
         private bool isformValid()
         {
-            if (txtLecturerId.Text.ToString().Trim() == string.Empty || txtName.Text.ToString().Trim() == string.Empty || ddFaculty.Text.Trim() == string.Empty || ddCenter.Text.Trim() == string.Empty || ddDepartment.Text.Trim() == string.Empty || ddLevel.Text.Trim() == string.Empty || ddBuilding.Text.Trim() == string.Empty || ddWorkingD.Text.Trim() == string.Empty || ddWorkingH.Text.Trim() == string.Empty )
+            if (txtLecturerId.Text.ToString().Trim() == string.Empty || txtName.Text.ToString().Trim() == string.Empty || ddFaculty.Text.Trim() == string.Empty || ddCenter.Text.Trim() == string.Empty || ddDepartment.Text.Trim() == string.Empty || ddLevel.Text.Trim() == string.Empty || ddBuilding.Text.Trim() == string.Empty || ddWorkingD.Text.Trim() == string.Empty || ddWorkingH.Text.Trim() == string.Empty)
             {
-                MessageBox.Show("Please Enter All Field", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please fill out the all field", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
             else
@@ -178,6 +177,7 @@ namespace app.Forms.Lecturer
             }
         }
 
+        //Form load
         private void Add_Lecturer_Load(object sender, EventArgs e)
         {
             //Load the drop down data to from
@@ -188,20 +188,12 @@ namespace app.Forms.Lecturer
             loadLevel();
             loadWorkingDay();
             loadWorkingHours();
-            loadFaculty2();
 
-            //set the dropdown to visible selected item from table
+            //if button text update, Then table value set to update form
             if (btnAddLecSub.Text == "Update")
             {
-                lblAddLec.Text = "Update Lecturer";
-                ddFaculty.DropDownStyle = ComboBoxStyle.DropDown;
-                ddDepartment.DropDownStyle = ComboBoxStyle.DropDown;
-                ddCenter.DropDownStyle = ComboBoxStyle.DropDown;
-                ddBuilding.DropDownStyle = ComboBoxStyle.DropDown;
-                ddLevel.DropDownStyle = ComboBoxStyle.DropDown;
-                ddWorkingD.DropDownStyle = ComboBoxStyle.DropDown;
-                ddWorkingH.DropDownStyle = ComboBoxStyle.DropDown;
-                txtLecturerId.ReadOnly = true;
+                lblAddLec.Text = "Update Lecturer";                
+                txtLecturerId.ReadOnly = true;          //User cannot edit id, Read ony
 
                 lblIndex.Text = id;
                 txtLecturerId.Text = lecid;
@@ -213,18 +205,45 @@ namespace app.Forms.Lecturer
                 ddLevel.Text = lecLevel;
                 ddWorkingD.Text = lecWD;
                 ddWorkingH.Text = lecWH;
+
+                //set lecturer level index to lecturer Category
+                if (lecLevel == "1")
+                {
+                    ddLevel.Text = "Professor";
+                }
+                else if (lecLevel == "2")
+                {
+                    ddLevel.Text = "Assistant Professor";
+                }
+                else if (lecLevel == "3")
+                {
+                    ddLevel.Text = "Senior Lecturer(HG)";
+                }
+                else if (lecLevel == "4")
+                {
+                    ddLevel.Text = "Senior Lecturer";
+                }
+                else if (lecLevel == "5")
+                {
+                    ddLevel.Text = "Lecturer";
+                }
+                else if (lecLevel == "6")
+                {
+                    ddLevel.Text = "Assistant Lecturer";
+                }
             }
-            //Make the dropdown style as DropDownList
+
+            //Make the all feild as empty field
             if (btnAddLecSub.Text == "Submit")
             {
                 txtLecturerId.Text = string.Empty;
-                ddFaculty.DropDownStyle = ComboBoxStyle.DropDownList;
-                ddDepartment.DropDownStyle = ComboBoxStyle.DropDownList;
-                ddCenter.DropDownStyle = ComboBoxStyle.DropDownList;
-                ddBuilding.DropDownStyle = ComboBoxStyle.DropDownList;
-                ddLevel.DropDownStyle = ComboBoxStyle.DropDownList;
-                ddWorkingD.DropDownStyle = ComboBoxStyle.DropDownList;
-                ddWorkingH.DropDownStyle = ComboBoxStyle.DropDownList;
+                ddFaculty.Text = "";
+                ddDepartment.Text = "";
+                ddCenter.Text = "";
+                ddBuilding.Text = "";
+                ddLevel.Text = "";
+                ddWorkingD.Text = "";
+                ddWorkingH.Text = "";
                 txtLecturerId.ReadOnly = false;
             }
         }
@@ -233,48 +252,47 @@ namespace app.Forms.Lecturer
         {
 
         }
+        
+        //Method to only allow digit to insert lecturer id text box
+        private void txtLecturerId_KeyPress(object sender, KeyPressEventArgs e)
+        {            
+            char ch = e.KeyChar;
+            //set text box to number only field, if user enter string Worning message will be display, allow 8 is for backspace button and 46 for delete button
+            if (!Char.IsDigit(ch) && ch!=8 && ch!=46)
+            {
+                e.Handled = true;
+                MessageBox.Show("This field accept number only.!!!\n\nPlease enter 6 digit lecturer id", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
-        //Clear button
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            clear();
+            //check lecturer id text box have 6 digit,If more than 6 digit. Worning message will be display            
+            if(txtLecturerId.Text.Length  >= 6)
+            {
+                MessageBox.Show("You have exceedede the maximum number of 6 digit in this field.!!!\n\nPlease enter 6 digit lecturer id", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
-        //Methord to clear form data
+        private void txtLecturerId_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        //Method to clear all input field
         public void clear()
         {
             if (btnAddLecSub.Text == "Submit")
             {
                 txtLecturerId.Text = string.Empty;
             }
-            
+
             txtName.Text = string.Empty;
-            ddFaculty.SelectedIndex = -1;
-            ddDepartment.SelectedIndex = -1;
-            ddCenter.SelectedIndex = -1;
-            ddBuilding.SelectedIndex = -1;
-            ddLevel.SelectedIndex = -1;
-            ddWorkingD.SelectedIndex = -1;
-            ddWorkingH.SelectedIndex = -1;
-        }
-
-        public void loadFaculty2()
-        {
-            ddFaculty.Items.Clear();
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT Faculty FROM addlecfill";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
-            {
-                ddFaculty.Items.Add(dr["Faculty"].ToString());
-            }
-
-            con.Close();
+            rankOut.Text = "@";
+            ddFaculty.Text = string.Empty;
+            ddDepartment.Text = string.Empty;
+            ddCenter.Text = string.Empty;
+            ddBuilding.Text = string.Empty;
+            ddLevel.Text = string.Empty;
+            ddWorkingD.Text = string.Empty;
+            ddWorkingH.Text = string.Empty;
         }
 
         //Load the Faculty drop down data from table
@@ -417,8 +435,28 @@ namespace app.Forms.Lecturer
             con.Close();
         }
 
+        //Clear button
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            clear();
+        }
+
+        //Method to Set changed botton of text to submit text and othe content
+        public void addLecInfo()
+        {
+            lblAddLec.Text = "Add Lecturer";
+            btnAddLecSub.Text = "Submit";
+            btnAddLecSub.Visible = false;
+        }
+
+        //Method to change submit button text to update 
+        public void updateLecInfo()
+        {
+            btnAddLecSub.Text = "Update";
+        }
+
         //Method to close the form
-        private void btnClose_Click(object sender, EventArgs e)
+        private void bunifuButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

@@ -12,8 +12,7 @@ namespace app
     class ClassLecturer
     {
         //Getter setter properties
-        //Act as a data carrier in app
-
+        //Act as a data carrier in application
         public String ID { get; set; }
         public String LecturerID { get; set; }
         public String Name { get; set; }
@@ -40,13 +39,12 @@ namespace app
             {
                 //Select query
                 con.Open();
-                string sql = "SELECT Id,Lecturerid,Name,Faculty,Department,Center,Building,Level,WD,WH FROM Lecturer";
+                string sql = "SELECT Id,Lecturerid,Name,Faculty,Department,Center,Building,Level,WD,WH,Rank FROM Lecturer";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
                 
                 adapter.Fill(dt);
 
-                //dgv.DataSource=dt;
             }
             catch(Exception ex)
             {
@@ -187,7 +185,7 @@ namespace app
 
                 int rows = cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Deleted Successfully", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lecturer deleted successfully", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                 if (rows > 0)
                 {
@@ -235,12 +233,12 @@ namespace app
                 //Creating sql data reader Lecturer ID already exist
                 SqlDataReader dr = cmd.ExecuteReader();
 
-                //if dataset has rows show the 
+                //if dataset has rows show the ID
                 if (dr.HasRows)
                 {
                     while (dr.Read())
                     {
-                        MessageBox.Show("Lecturer ID already exist !\n\nPlease update Lecturer profile or Add another Lecturer ID" + dr.GetValue(1).ToString() + "", "Informtion", MessageBoxButtons.OK, MessageBoxIcon.Error);                        
+                        MessageBox.Show("Sorry, " + dr.GetValue(1).ToString() + " Lecturer ID already exists!\n\nPlease try again using another Lecturer ID or Update Lecturer profile", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);                        
                     }
                 }                    
                 else

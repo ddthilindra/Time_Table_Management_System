@@ -64,6 +64,9 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress">
       <HintPath>..\..\..\..\Desktop\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown">
+      <HintPath>..\..\..\..\Desktop\C#\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuFormDock">
       <HintPath>..\..\..\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
     </Reference>
@@ -73,12 +76,19 @@
     <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar">
       <HintPath>..\..\..\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
     </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider">
+      <HintPath>..\..\C#\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
     <Reference Include="Bunifu.UI.WinForms.BunifuTextbox">
       <HintPath>..\..\..\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu.UI.WinForms.BunifuTextbox.dll</HintPath>
     </Reference>
     <Reference Include="Bunifu_UI_v1.5.3">
       <HintPath>..\..\..\..\Desktop\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_WinForms_1.11.5.1\Bunifu_UI_v1.5.3.dll</HintPath>
     </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="SLRDbConnector">
@@ -106,9 +116,28 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\Location\ClassMngsessions.cs" />
+    <Compile Include="Class\Session\ClassLocationNotAvailableTimes.cs" />
+    <Compile Include="Class\Session\ClassNotAvailableTimes.cs" />
     <Compile Include="Class\Lecturer\ClassLecturer.cs" />
     <Compile Include="Class\Lecturer\ClassSession.cs" />
     <Compile Include="Class\Lecturer\ClassSubject.cs" />
+    <Compile Include="Class\Location\ClassLocation.cs" />
+    <Compile Include="Class\Student_Tag\AddStudentClass.cs" />
+    <Compile Include="Class\Student_Tag\TagClass.cs" />
+    <Compile Include="Class\WorkingDays\ClassWorkingDays.cs" />
+    <Compile Include="Forms\Control\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Control\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Control\H_GenerateTimeT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Control\H_GenerateTimeT.Designer.cs">
+      <DependentUpon>H_GenerateTimeT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Control\H_lecture.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,6 +149,12 @@
     </Compile>
     <Compile Include="Forms\Control\H_location.Designer.cs">
       <DependentUpon>H_location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Control\H_Session.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Control\H_Session.Designer.cs">
+      <DependentUpon>H_Session.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Control\H_student.cs">
       <SubType>UserControl</SubType>
@@ -164,13 +199,13 @@
       <DependentUpon>Add_Lecturer.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Lecturer\Add_Session.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Lecturer\Add_Session.Designer.cs">
       <DependentUpon>Add_Session.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Lecturer\Add_Subject.cs">
-      <SubType>UserControl</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Lecturer\Add_Subject.Designer.cs">
       <DependentUpon>Add_Subject.cs</DependentUpon>
@@ -199,19 +234,70 @@
     <Compile Include="Forms\Lecturer\Update_Lecturer.Designer.cs">
       <DependentUpon>Update_Lecturer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Student\Add_Student.cs">
+    <Compile Include="Forms\Location\AddLocation.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Student\Add_Student.Designer.cs">
-      <DependentUpon>Add_Student.cs</DependentUpon>
+    <Compile Include="Forms\Location\AddLocation.Designer.cs">
+      <DependentUpon>AddLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Session\SessionandNATAllocations.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Session\SessionandNATAllocations.Designer.cs">
+      <DependentUpon>SessionandNATAllocations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Add_Student_Groups.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\Add_Student_Groups.Designer.cs">
+      <DependentUpon>Add_Student_Groups.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Add_Tags.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\Add_Tags.Designer.cs">
+      <DependentUpon>Add_Tags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Manage_Students.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\Manage_Students.Designer.cs">
+      <DependentUpon>Manage_Students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Student\Manage_Tags.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Student\Manage_Tags.Designer.cs">
+      <DependentUpon>Manage_Tags.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkingD\FormAddWorkingDays.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkingD\FormAddWorkingDays.Designer.cs">
+      <DependentUpon>FormAddWorkingDays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WorkingD\FormManageWorkingDays.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\WorkingD\FormManageWorkingDays.Designer.cs">
+      <DependentUpon>FormManageWorkingDays.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\Control\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Control\H_GenerateTimeT.resx">
+      <DependentUpon>H_GenerateTimeT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Control\H_lecture.resx">
       <DependentUpon>H_lecture.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Control\H_location.resx">
       <DependentUpon>H_location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Control\H_Session.resx">
+      <DependentUpon>H_Session.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Control\H_student.resx">
       <DependentUpon>H_student.cs</DependentUpon>
@@ -252,8 +338,29 @@
     <EmbeddedResource Include="Forms\Lecturer\Update_Lecturer.resx">
       <DependentUpon>Update_Lecturer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Student\Add_Student.resx">
-      <DependentUpon>Add_Student.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Location\AddLocation.resx">
+      <DependentUpon>AddLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Session\SessionandNATAllocations.resx">
+      <DependentUpon>SessionandNATAllocations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Add_Student_Groups.resx">
+      <DependentUpon>Add_Student_Groups.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Add_Tags.resx">
+      <DependentUpon>Add_Tags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Manage_Students.resx">
+      <DependentUpon>Manage_Students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Student\Manage_Tags.resx">
+      <DependentUpon>Manage_Tags.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkingD\FormAddWorkingDays.resx">
+      <DependentUpon>FormAddWorkingDays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\WorkingD\FormManageWorkingDays.resx">
+      <DependentUpon>FormManageWorkingDays.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

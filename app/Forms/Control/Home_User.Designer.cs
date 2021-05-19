@@ -31,20 +31,22 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home_User));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.bunifuGradientPanel1 = new Bunifu.Framework.UI.BunifuGradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuCircleProgressbar2 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.bunifuCircleProgressbar1 = new Bunifu.Framework.UI.BunifuCircleProgressbar();
-            this.bunifuGradientPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.lblSub = new System.Windows.Forms.Label();
+            this.lblLab = new System.Windows.Forms.Label();
+            this.lblLec = new System.Windows.Forms.Label();
+            this.lblGrp = new System.Windows.Forms.Label();
+            this.lblRoom = new System.Windows.Forms.Label();
+            this.lblBld = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -52,162 +54,219 @@
             this.bunifuElipse1.ElipseRadius = 15;
             this.bunifuElipse1.TargetControl = this;
             // 
-            // bunifuGradientPanel1
+            // label1
             // 
-            this.bunifuGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuGradientPanel1.BackgroundImage")));
-            this.bunifuGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuGradientPanel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuGradientPanel1.Controls.Add(this.pictureBox1);
-            this.bunifuGradientPanel1.Controls.Add(this.label2);
-            this.bunifuGradientPanel1.Controls.Add(this.label1);
-            this.bunifuGradientPanel1.GradientBottomLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(43, 47);
-            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
-            this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(1038, 146);
-            this.bunifuGradientPanel1.TabIndex = 0;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(436, 534);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(0, 19);
+            this.label1.TabIndex = 2;
             // 
-            // pictureBox1
+            // lblSub
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(867, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.lblSub.AutoSize = true;
+            this.lblSub.BackColor = System.Drawing.Color.Black;
+            this.lblSub.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSub.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblSub.Location = new System.Drawing.Point(937, 541);
+            this.lblSub.Name = "lblSub";
+            this.lblSub.Size = new System.Drawing.Size(111, 47);
+            this.lblSub.TabIndex = 64;
+            this.lblSub.Text = "Value";
+            // 
+            // lblLab
+            // 
+            this.lblLab.AutoSize = true;
+            this.lblLab.BackColor = System.Drawing.Color.Black;
+            this.lblLab.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLab.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblLab.Location = new System.Drawing.Point(529, 541);
+            this.lblLab.Name = "lblLab";
+            this.lblLab.Size = new System.Drawing.Size(111, 47);
+            this.lblLab.TabIndex = 63;
+            this.lblLab.Text = "Value";
+            // 
+            // lblLec
+            // 
+            this.lblLec.AutoSize = true;
+            this.lblLec.BackColor = System.Drawing.Color.Black;
+            this.lblLec.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLec.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblLec.Location = new System.Drawing.Point(85, 541);
+            this.lblLec.Name = "lblLec";
+            this.lblLec.Size = new System.Drawing.Size(111, 47);
+            this.lblLec.TabIndex = 62;
+            this.lblLec.Text = "Value";
+            // 
+            // lblGrp
+            // 
+            this.lblGrp.AutoSize = true;
+            this.lblGrp.BackColor = System.Drawing.Color.Black;
+            this.lblGrp.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGrp.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblGrp.Location = new System.Drawing.Point(937, 309);
+            this.lblGrp.Name = "lblGrp";
+            this.lblGrp.Size = new System.Drawing.Size(111, 47);
+            this.lblGrp.TabIndex = 61;
+            this.lblGrp.Text = "Value";
+            // 
+            // lblRoom
+            // 
+            this.lblRoom.AutoSize = true;
+            this.lblRoom.BackColor = System.Drawing.Color.Black;
+            this.lblRoom.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRoom.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblRoom.Location = new System.Drawing.Point(529, 309);
+            this.lblRoom.Name = "lblRoom";
+            this.lblRoom.Size = new System.Drawing.Size(111, 47);
+            this.lblRoom.TabIndex = 60;
+            this.lblRoom.Text = "Value";
+            // 
+            // lblBld
+            // 
+            this.lblBld.AutoSize = true;
+            this.lblBld.BackColor = System.Drawing.Color.Black;
+            this.lblBld.Font = new System.Drawing.Font("Microsoft Tai Le", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBld.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.lblBld.Location = new System.Drawing.Point(71, 309);
+            this.lblBld.Name = "lblBld";
+            this.lblBld.Size = new System.Drawing.Size(111, 47);
+            this.lblBld.TabIndex = 59;
+            this.lblBld.Text = "Value";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(905, 481);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(166, 44);
+            this.label7.TabIndex = 58;
+            this.label7.Text = "SUBJECTS";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(514, 481);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(95, 44);
+            this.label6.TabIndex = 57;
+            this.label6.Text = "LABS";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(56, 481);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(170, 44);
+            this.label4.TabIndex = 56;
+            this.label4.Text = "LECTURES";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(905, 255);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(149, 44);
+            this.label3.TabIndex = 55;
+            this.label3.Text = "GROUPS";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(66)))), ((int)(((byte)(194)))));
-            this.label2.Location = new System.Drawing.Point(81, 77);
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(499, 255);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(163, 34);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "User Name";
+            this.label2.Size = new System.Drawing.Size(141, 44);
+            this.label2.TabIndex = 54;
+            this.label2.Text = "ROOMS";
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(66)))), ((int)(((byte)(194)))));
-            this.label1.Location = new System.Drawing.Point(47, 21);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 34);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Profile";
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(56, 255);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(186, 44);
+            this.label5.TabIndex = 53;
+            this.label5.Text = "BUILDINGS";
             // 
-            // panel1
+            // label11
             // 
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 224);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1127, 428);
-            this.panel1.TabIndex = 1;
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Microsoft Tai Le", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(514, 18);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(204, 44);
+            this.label11.TabIndex = 52;
+            this.label11.Text = "STATISTICS";
             // 
-            // panel3
+            // pictureBox2
             // 
-            this.panel3.Controls.Add(this.bunifuCircleProgressbar2);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(558, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(569, 428);
-            this.panel3.TabIndex = 1;
-            // 
-            // bunifuCircleProgressbar2
-            // 
-            this.bunifuCircleProgressbar2.animated = true;
-            this.bunifuCircleProgressbar2.animationIterval = 5;
-            this.bunifuCircleProgressbar2.animationSpeed = 50;
-            this.bunifuCircleProgressbar2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgressbar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar2.BackgroundImage")));
-            this.bunifuCircleProgressbar2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(66)))), ((int)(((byte)(194)))));
-            this.bunifuCircleProgressbar2.LabelVisible = true;
-            this.bunifuCircleProgressbar2.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar2.LineThickness = 8;
-            this.bunifuCircleProgressbar2.Location = new System.Drawing.Point(141, 76);
-            this.bunifuCircleProgressbar2.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.bunifuCircleProgressbar2.MaxValue = 100;
-            this.bunifuCircleProgressbar2.Name = "bunifuCircleProgressbar2";
-            this.bunifuCircleProgressbar2.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar2.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(66)))), ((int)(((byte)(194)))));
-            this.bunifuCircleProgressbar2.Size = new System.Drawing.Size(201, 201);
-            this.bunifuCircleProgressbar2.TabIndex = 17;
-            this.bunifuCircleProgressbar2.Value = 17;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.bunifuCircleProgressbar1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(552, 428);
-            this.panel2.TabIndex = 0;
-            // 
-            // bunifuCircleProgressbar1
-            // 
-            this.bunifuCircleProgressbar1.animated = true;
-            this.bunifuCircleProgressbar1.animationIterval = 5;
-            this.bunifuCircleProgressbar1.animationSpeed = 50;
-            this.bunifuCircleProgressbar1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuCircleProgressbar1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuCircleProgressbar1.BackgroundImage")));
-            this.bunifuCircleProgressbar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F);
-            this.bunifuCircleProgressbar1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(66)))), ((int)(((byte)(194)))));
-            this.bunifuCircleProgressbar1.LabelVisible = true;
-            this.bunifuCircleProgressbar1.LineProgressThickness = 8;
-            this.bunifuCircleProgressbar1.LineThickness = 8;
-            this.bunifuCircleProgressbar1.Location = new System.Drawing.Point(194, 76);
-            this.bunifuCircleProgressbar1.Margin = new System.Windows.Forms.Padding(10, 9, 10, 9);
-            this.bunifuCircleProgressbar1.MaxValue = 100;
-            this.bunifuCircleProgressbar1.Name = "bunifuCircleProgressbar1";
-            this.bunifuCircleProgressbar1.ProgressBackColor = System.Drawing.Color.Gainsboro;
-            this.bunifuCircleProgressbar1.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(66)))), ((int)(((byte)(194)))));
-            this.bunifuCircleProgressbar1.Size = new System.Drawing.Size(201, 201);
-            this.bunifuCircleProgressbar1.TabIndex = 17;
-            this.bunifuCircleProgressbar1.Value = 39;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(93, 65);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(928, 569);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 51;
+            this.pictureBox2.TabStop = false;
             // 
             // Home_User
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.bunifuGradientPanel1);
+            this.Controls.Add(this.lblSub);
+            this.Controls.Add(this.lblLab);
+            this.Controls.Add(this.lblLec);
+            this.Controls.Add(this.lblGrp);
+            this.Controls.Add(this.lblRoom);
+            this.Controls.Add(this.lblBld);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Home_User";
             this.Size = new System.Drawing.Size(1127, 652);
-            this.bunifuGradientPanel1.ResumeLayout(false);
-            this.bunifuGradientPanel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
+            this.Load += new System.EventHandler(this.Home_User_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
-        private Bunifu.Framework.UI.BunifuGradientPanel bunifuGradientPanel1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar2;
-        private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuCircleProgressbar bunifuCircleProgressbar1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblSub;
+        private System.Windows.Forms.Label lblLab;
+        private System.Windows.Forms.Label lblLec;
+        private System.Windows.Forms.Label lblGrp;
+        private System.Windows.Forms.Label lblRoom;
+        private System.Windows.Forms.Label lblBld;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

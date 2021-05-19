@@ -16,11 +16,14 @@ namespace app.Forms.Lecturer
         //Creating object from ClassLecturer
         ClassLecturer c = new ClassLecturer();
 
-        Add_Lecturer form;
+        //Create new object from Add_Lecturer form
+        Add_Lecturer form;        
+
+        //DB connection
+        static string myconstr = System.Configuration.ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
 
         //Creating object from this Show_Lecturer to access this form in main menu
         static Show_Lecturer _obj;
-
         public static Show_Lecturer Instance
         {
             get
@@ -36,7 +39,7 @@ namespace app.Forms.Lecturer
         public Show_Lecturer()
         {
             InitializeComponent();
-            form = new Add_Lecturer();
+            form = new Add_Lecturer();  //Create new object from Add_Session form
         }
 
         private void bunifuCustomDataGrid1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -44,28 +47,12 @@ namespace app.Forms.Lecturer
 
         }
 
+        //form load
         private void Show_Lecturer_Load(object sender, EventArgs e)
         {
             //load lecturer table to gridview
             DataTable dt = c.selectLecturer();
             lecTbl.DataSource = dt;
-
-            //Creaing Edit button in gridview
-            DataGridViewButtonColumn btn = new DataGridViewButtonColumn();
-            btn.HeaderText = "";
-            btn.Text = "Edit";
-            btn.DefaultCellStyle.ForeColor = Color.Red;
-            btn.DefaultCellStyle.BackColor = Color.Beige;
-            btn.UseColumnTextForButtonValue = true;
-            lecTbl.Columns.Add(btn);
-
-            //Creaing Delete button in gridview
-            DataGridViewButtonColumn btn2 = new DataGridViewButtonColumn();
-            btn2.HeaderText = "";
-            btn2.Text = "Delete";
-            btn2.DefaultCellStyle.BackColor = SystemColors.WindowFrame;
-            btn2.UseColumnTextForButtonValue = true;
-            lecTbl.Columns.Add(btn2);
         }
 
         private void btnAddLecture_Click(object sender, EventArgs e)
@@ -73,6 +60,7 @@ namespace app.Forms.Lecturer
                 
         }
 
+        //Method for add new lecturer button
         private void btnAddLecture_Click_1(object sender, EventArgs e)
         {
             form.clear();               //clear form data in addlecturer form
@@ -82,7 +70,7 @@ namespace app.Forms.Lecturer
             lecTbl.DataSource = dt;
         }
 
-        //Method to edit delete button click
+        //Method for edit and delete oparetion for button click
         private void lecTbl_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if(e.ColumnIndex==0)
@@ -115,7 +103,7 @@ namespace app.Forms.Lecturer
             {
                 //Delete Record Button
 
-                if(MessageBox.Show("Are you want to delete Lecturer record", "Information", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information) == DialogResult.Yes)
+                if(MessageBox.Show("Are you sure?\n\nDo you really want to delete this record?\nThis process cannot be undone!", "Warning", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Stop) == DialogResult.Yes)
                 {
                     //Pass the lecturer id to deleteLecturer method
                     c.deleteLecturer(lecTbl.Rows[e.RowIndex].Cells[2].Value.ToString());
@@ -127,13 +115,11 @@ namespace app.Forms.Lecturer
                 return;
             }
         }
-
-        //DB connection
-        static string myconstr = System.Configuration.ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
-
+                
         //Method to Search data in table
         private void lecSch_TextChange(object sender, EventArgs e)
         {
+            //Assign the keyword
             string keyword = txtLecSch.Text;
 
             //Database Connection
@@ -161,9 +147,9 @@ namespace app.Forms.Lecturer
             }
         }
 
+        //Refresh the lecturer table
         private void btnRefresh_Click(object sender, EventArgs e)
         {
-            //load lecturer table to gridview
             DataTable dt = c.selectLecturer();
             lecTbl.DataSource = dt;
         }

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using app.Forms.Lecturer;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace app.Forms.Control
 {
@@ -47,6 +49,9 @@ namespace app.Forms.Control
         private void H_lecture_Load(object sender, EventArgs e)
         {
             btnBack.Visible = false;
+            loadlec();
+            loadSub();
+            loadSess();
         }
 
         private void btnAddLecture_Click(object sender, EventArgs e)
@@ -71,18 +76,15 @@ namespace app.Forms.Control
             //This will display the UCHome back*/
         }
 
-        private void btnLecturer_Click(object sender, EventArgs e)
+        private void gunaShadowPanel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
+
+        private void gunaShadowPanel1_MouseClick(object sender, MouseEventArgs e)
         {
             btnBack.Visible = true;
 
-            /*if (!H_lecture.Instance.PnlContainer.Controls.ContainsKey("Add_Lecturer"))
-            {
-                Add_Lecturer un = new Add_Lecturer();
-                un.Dock = DockStyle.Fill;
-                H_lecture.Instance.PnlContainer.Controls.Add(un);
-            }
-            H_lecture.Instance.PnlContainer.Controls["Add_Lecturer"].BringToFront();
-            H_lecture.Instance.BackButton.Visible = true;//*/
 
             if (!PnlContainer.Controls.Contains(Show_Lecturer.Instance))
             {
@@ -90,31 +92,46 @@ namespace app.Forms.Control
                 PnlContainer.Controls.Add(Show_Lecturer.Instance);
                 Show_Lecturer.Instance.Dock = DockStyle.Fill;
                 Show_Lecturer.Instance.BringToFront();
-                
             }
             else
             {
-                /*panelContainer.Controls.Clear();
-                Add_Lecturer.Instance.Dock = DockStyle.Fill;
-                PnlContainer.Controls.Add(Add_Lecturer.Instance);
-                Add_Lecturer.Instance.BringToFront();//*/
-
                 Show_Lecturer.Instance.BringToFront();
-
-                //Add_Lecturer.Instance.BringToFront();
-            }//*/
-
-            /*btnAddLecture.Visible = false;
-            label1.Visible = false;
-            btnBack.Visible = true;
-            
-            Add_Lecturer addlec = new Add_Lecturer();
-            addlec.Dock = DockStyle.Fill;
-            panelContainer.Controls.Add(addlec);
-            //This will display add lecturer when form loads*/
+            }
         }
 
-        private void btnSubject_Click(object sender, EventArgs e)
+        private void gunaShadowPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {            
+            
+        }
+        //Call Connection string get database info
+        static string myconstr = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
+
+        //Database Connection
+        SqlConnection con = new SqlConnection(myconstr);
+        private void loadlec()
+        {
+            SqlConnection con = new SqlConnection(myconstr);
+            if (con != null && con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            
+            string sql = "select Count(Id) from Lecturer";
+            SqlCommand cmd;
+            cmd = new SqlCommand(sql, con);
+            Int32 rows_count = Convert.ToInt32(cmd.ExecuteScalar());
+            cmd.Dispose();
+            con.Close();
+            lblLec.Text = rows_count.ToString();
+
+        }
+
+        private void gunaShadowPanel2_MouseClick(object sender, MouseEventArgs e)
         {
             if (!PnlContainer.Controls.Contains(Show_Subject.Instance))
             {
@@ -129,7 +146,24 @@ namespace app.Forms.Control
             }
         }
 
-        private void bunifuButton1_Click(object sender, EventArgs e)
+        private void loadSub()
+        {
+            SqlConnection con = new SqlConnection(myconstr);
+            if (con != null && con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            string sql = "select Count(Id) from Subject";
+            SqlCommand cmd;
+            cmd = new SqlCommand(sql, con);
+            Int32 rows_count = Convert.ToInt32(cmd.ExecuteScalar());
+            cmd.Dispose();
+            con.Close();
+            lblSub.Text = rows_count.ToString();
+
+        }
+
+        private void gunaShadowPanel3_MouseClick(object sender, MouseEventArgs e)
         {
             if (!PnlContainer.Controls.Contains(Show_Session.Instance))
             {
@@ -143,5 +177,23 @@ namespace app.Forms.Control
                 Show_Session.Instance.BringToFront();
             }
         }
+
+        private void loadSess()
+        {
+            SqlConnection con = new SqlConnection(myconstr);
+            if (con != null && con.State == ConnectionState.Closed)
+            {
+                con.Open();
+            }
+            string sql = "select Count(Id) from Session";
+            SqlCommand cmd;
+            cmd = new SqlCommand(sql, con);
+            Int32 rows_count = Convert.ToInt32(cmd.ExecuteScalar());
+            cmd.Dispose();
+            con.Close();
+            lblSess.Text = rows_count.ToString();
+
+        }
+
     }
 }

@@ -30,30 +30,39 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(H_lecture));
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties5 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties stateProperties6 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.StateProperties();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnBack = new System.Windows.Forms.Button();
             this.panelContainer = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.gunaShadowPanel3 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.lblSess = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.lblSub = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.gunaShadowPanel1 = new Guna.UI.WinForms.GunaShadowPanel();
+            this.lblLec = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnLecturer = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.bunifuButton1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btnSubject = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel1.SuspendLayout();
             this.panelContainer.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            this.gunaShadowPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.gunaShadowPanel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.gunaShadowPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,13 +99,229 @@
             // 
             // panelContainer
             // 
+            this.panelContainer.Controls.Add(this.label8);
+            this.panelContainer.Controls.Add(this.gunaShadowPanel3);
+            this.panelContainer.Controls.Add(this.gunaShadowPanel2);
+            this.panelContainer.Controls.Add(this.gunaShadowPanel1);
             this.panelContainer.Controls.Add(this.label1);
-            this.panelContainer.Controls.Add(this.groupBox1);
+            this.panelContainer.Controls.Add(this.pictureBox1);
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
             this.panelContainer.Name = "panelContainer";
             this.panelContainer.Size = new System.Drawing.Size(1136, 658);
             this.panelContainer.TabIndex = 4;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.SteelBlue;
+            this.label8.Location = new System.Drawing.Point(68, 3);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(697, 49);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Time Table Management System";
+            // 
+            // gunaShadowPanel3
+            // 
+            this.gunaShadowPanel3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel3.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel3.Controls.Add(this.label7);
+            this.gunaShadowPanel3.Controls.Add(this.pictureBox4);
+            this.gunaShadowPanel3.Controls.Add(this.lblSess);
+            this.gunaShadowPanel3.Controls.Add(this.label9);
+            this.gunaShadowPanel3.Controls.Add(this.label10);
+            this.gunaShadowPanel3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaShadowPanel3.Location = new System.Drawing.Point(101, 384);
+            this.gunaShadowPanel3.Name = "gunaShadowPanel3";
+            this.gunaShadowPanel3.Radius = 6;
+            this.gunaShadowPanel3.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel3.ShadowShift = 8;
+            this.gunaShadowPanel3.Size = new System.Drawing.Size(325, 192);
+            this.gunaShadowPanel3.TabIndex = 10;
+            this.gunaShadowPanel3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gunaShadowPanel3_MouseClick);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.label7.Location = new System.Drawing.Point(227, 118);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(0, 37);
+            this.label7.TabIndex = 1;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(19, 22);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(82, 81);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox4.TabIndex = 0;
+            this.pictureBox4.TabStop = false;
+            // 
+            // lblSess
+            // 
+            this.lblSess.AutoSize = true;
+            this.lblSess.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lblSess.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.lblSess.Location = new System.Drawing.Point(241, 118);
+            this.lblSess.Name = "lblSess";
+            this.lblSess.Size = new System.Drawing.Size(30, 37);
+            this.lblSess.TabIndex = 1;
+            this.lblSess.Text = "s";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
+            this.label9.Location = new System.Drawing.Point(107, 33);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(150, 44);
+            this.label9.TabIndex = 1;
+            this.label9.Text = "Session";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(164, 155);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(128, 17);
+            this.label10.TabIndex = 2;
+            this.label10.Text = "Number of Session";
+            // 
+            // gunaShadowPanel2
+            // 
+            this.gunaShadowPanel2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel2.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel2.Controls.Add(this.label3);
+            this.gunaShadowPanel2.Controls.Add(this.pictureBox3);
+            this.gunaShadowPanel2.Controls.Add(this.lblSub);
+            this.gunaShadowPanel2.Controls.Add(this.label5);
+            this.gunaShadowPanel2.Controls.Add(this.label6);
+            this.gunaShadowPanel2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaShadowPanel2.Location = new System.Drawing.Point(631, 124);
+            this.gunaShadowPanel2.Name = "gunaShadowPanel2";
+            this.gunaShadowPanel2.Radius = 6;
+            this.gunaShadowPanel2.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel2.ShadowShift = 8;
+            this.gunaShadowPanel2.Size = new System.Drawing.Size(325, 192);
+            this.gunaShadowPanel2.TabIndex = 9;
+            this.gunaShadowPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaShadowPanel2_Paint);
+            this.gunaShadowPanel2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gunaShadowPanel2_MouseClick);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.label3.Location = new System.Drawing.Point(227, 118);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 37);
+            this.label3.TabIndex = 1;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(19, 22);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(82, 81);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox3.TabIndex = 0;
+            this.pictureBox3.TabStop = false;
+            // 
+            // lblSub
+            // 
+            this.lblSub.AutoSize = true;
+            this.lblSub.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
+            this.lblSub.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(69)))), ((int)(((byte)(153)))));
+            this.lblSub.Location = new System.Drawing.Point(241, 118);
+            this.lblSub.Name = "lblSub";
+            this.lblSub.Size = new System.Drawing.Size(30, 37);
+            this.lblSub.TabIndex = 1;
+            this.lblSub.Text = "s";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Bold);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(69)))), ((int)(((byte)(153)))));
+            this.label5.Location = new System.Drawing.Point(107, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(154, 44);
+            this.label5.TabIndex = 1;
+            this.label5.Text = "Subject";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(164, 155);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(125, 17);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Number of Subject";
+            // 
+            // gunaShadowPanel1
+            // 
+            this.gunaShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaShadowPanel1.BaseColor = System.Drawing.Color.White;
+            this.gunaShadowPanel1.Controls.Add(this.lblLec);
+            this.gunaShadowPanel1.Controls.Add(this.pictureBox2);
+            this.gunaShadowPanel1.Controls.Add(this.label2);
+            this.gunaShadowPanel1.Controls.Add(this.label4);
+            this.gunaShadowPanel1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaShadowPanel1.Location = new System.Drawing.Point(101, 124);
+            this.gunaShadowPanel1.Name = "gunaShadowPanel1";
+            this.gunaShadowPanel1.Radius = 6;
+            this.gunaShadowPanel1.ShadowColor = System.Drawing.Color.Black;
+            this.gunaShadowPanel1.ShadowShift = 8;
+            this.gunaShadowPanel1.Size = new System.Drawing.Size(325, 192);
+            this.gunaShadowPanel1.TabIndex = 8;
+            this.gunaShadowPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaShadowPanel1_Paint);
+            this.gunaShadowPanel1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gunaShadowPanel1_MouseClick);
+            // 
+            // lblLec
+            // 
+            this.lblLec.AutoSize = true;
+            this.lblLec.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLec.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.lblLec.Location = new System.Drawing.Point(227, 118);
+            this.lblLec.Name = "lblLec";
+            this.lblLec.Size = new System.Drawing.Size(0, 37);
+            this.lblLec.TabIndex = 1;
+            this.lblLec.Click += new System.EventHandler(this.label3_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(19, 22);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(82, 81);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 0;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
+            this.label2.Location = new System.Drawing.Point(107, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(165, 44);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Lecturer";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(164, 155);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(131, 17);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Number of Lecturer";
             // 
             // label1
             // 
@@ -108,233 +333,15 @@
             this.label1.Text = "label1";
             this.label1.Visible = false;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.pictureBox1);
-            this.groupBox1.Controls.Add(this.btnLecturer);
-            this.groupBox1.Controls.Add(this.bunifuButton1);
-            this.groupBox1.Controls.Add(this.btnSubject);
-            this.groupBox1.Location = new System.Drawing.Point(32, 42);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1051, 592);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(6, -14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(180, 49);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Lecturer";
-            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(712, 320);
+            this.pictureBox1.Location = new System.Drawing.Point(767, 351);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(366, 307);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnLecturer
-            // 
-            this.btnLecturer.AllowToggling = false;
-            this.btnLecturer.AnimationSpeed = 200;
-            this.btnLecturer.AutoGenerateColors = false;
-            this.btnLecturer.BackColor = System.Drawing.Color.Transparent;
-            this.btnLecturer.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnLecturer.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnLecturer.BackgroundImage")));
-            this.btnLecturer.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnLecturer.ButtonText = "Lecturer";
-            this.btnLecturer.ButtonTextMarginLeft = 0;
-            this.btnLecturer.ColorContrastOnClick = 45;
-            this.btnLecturer.ColorContrastOnHover = 45;
-            this.btnLecturer.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges1.BottomLeft = true;
-            borderEdges1.BottomRight = true;
-            borderEdges1.TopLeft = true;
-            borderEdges1.TopRight = true;
-            this.btnLecturer.CustomizableEdges = borderEdges1;
-            this.btnLecturer.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnLecturer.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btnLecturer.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnLecturer.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnLecturer.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnLecturer.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold);
-            this.btnLecturer.ForeColor = System.Drawing.Color.White;
-            this.btnLecturer.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLecturer.IconMarginLeft = 30;
-            this.btnLecturer.IconPadding = 10;
-            this.btnLecturer.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnLecturer.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnLecturer.IdleBorderRadius = 45;
-            this.btnLecturer.IdleBorderThickness = 3;
-            this.btnLecturer.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.btnLecturer.IdleIconLeftImage = null;
-            this.btnLecturer.IdleIconRightImage = null;
-            this.btnLecturer.IndicateFocus = true;
-            this.btnLecturer.Location = new System.Drawing.Point(93, 67);
-            this.btnLecturer.Name = "btnLecturer";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            stateProperties1.BorderRadius = 45;
-            stateProperties1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties1.BorderThickness = 3;
-            stateProperties1.FillColor = System.Drawing.Color.White;
-            stateProperties1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            stateProperties1.IconLeftImage = null;
-            stateProperties1.IconRightImage = null;
-            this.btnLecturer.onHoverState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.White;
-            stateProperties2.BorderRadius = 45;
-            stateProperties2.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties2.BorderThickness = 3;
-            stateProperties2.FillColor = System.Drawing.Color.White;
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            stateProperties2.IconLeftImage = null;
-            stateProperties2.IconRightImage = null;
-            this.btnLecturer.OnPressedState = stateProperties2;
-            this.btnLecturer.Size = new System.Drawing.Size(325, 192);
-            this.btnLecturer.TabIndex = 4;
-            this.btnLecturer.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnLecturer.TextMarginLeft = 0;
-            this.btnLecturer.UseDefaultRadiusAndThickness = true;
-            this.btnLecturer.Click += new System.EventHandler(this.btnLecturer_Click);
-            // 
-            // bunifuButton1
-            // 
-            this.bunifuButton1.AllowToggling = false;
-            this.bunifuButton1.AnimationSpeed = 200;
-            this.bunifuButton1.AutoGenerateColors = false;
-            this.bunifuButton1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.BackColor1 = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuButton1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuButton1.BackgroundImage")));
-            this.bunifuButton1.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.bunifuButton1.ButtonText = "Session";
-            this.bunifuButton1.ButtonTextMarginLeft = 0;
-            this.bunifuButton1.ColorContrastOnClick = 45;
-            this.bunifuButton1.ColorContrastOnHover = 45;
-            this.bunifuButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges2.BottomLeft = true;
-            borderEdges2.BottomRight = true;
-            borderEdges2.TopLeft = true;
-            borderEdges2.TopRight = true;
-            this.bunifuButton1.CustomizableEdges = borderEdges2;
-            this.bunifuButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.bunifuButton1.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.bunifuButton1.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.bunifuButton1.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.bunifuButton1.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.bunifuButton1.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold);
-            this.bunifuButton1.ForeColor = System.Drawing.Color.White;
-            this.bunifuButton1.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.IconMarginLeft = 30;
-            this.bunifuButton1.IconPadding = 10;
-            this.bunifuButton1.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuButton1.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.bunifuButton1.IdleBorderRadius = 45;
-            this.bunifuButton1.IdleBorderThickness = 3;
-            this.bunifuButton1.IdleFillColor = System.Drawing.Color.DarkSlateBlue;
-            this.bunifuButton1.IdleIconLeftImage = null;
-            this.bunifuButton1.IdleIconRightImage = null;
-            this.bunifuButton1.IndicateFocus = true;
-            this.bunifuButton1.Location = new System.Drawing.Point(93, 285);
-            this.bunifuButton1.Name = "bunifuButton1";
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(69)))), ((int)(((byte)(153)))));
-            stateProperties3.BorderRadius = 45;
-            stateProperties3.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties3.BorderThickness = 3;
-            stateProperties3.FillColor = System.Drawing.Color.White;
-            stateProperties3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(69)))), ((int)(((byte)(153)))));
-            stateProperties3.IconLeftImage = null;
-            stateProperties3.IconRightImage = null;
-            this.bunifuButton1.onHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.White;
-            stateProperties4.BorderRadius = 45;
-            stateProperties4.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties4.BorderThickness = 3;
-            stateProperties4.FillColor = System.Drawing.Color.White;
-            stateProperties4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            stateProperties4.IconLeftImage = null;
-            stateProperties4.IconRightImage = null;
-            this.bunifuButton1.OnPressedState = stateProperties4;
-            this.bunifuButton1.Size = new System.Drawing.Size(325, 192);
-            this.bunifuButton1.TabIndex = 5;
-            this.bunifuButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuButton1.TextMarginLeft = 0;
-            this.bunifuButton1.UseDefaultRadiusAndThickness = true;
-            this.bunifuButton1.Click += new System.EventHandler(this.bunifuButton1_Click);
-            // 
-            // btnSubject
-            // 
-            this.btnSubject.AllowToggling = false;
-            this.btnSubject.AnimationSpeed = 200;
-            this.btnSubject.AutoGenerateColors = false;
-            this.btnSubject.BackColor = System.Drawing.Color.Transparent;
-            this.btnSubject.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(69)))), ((int)(((byte)(153)))));
-            this.btnSubject.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSubject.BackgroundImage")));
-            this.btnSubject.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btnSubject.ButtonText = "Subject";
-            this.btnSubject.ButtonTextMarginLeft = 0;
-            this.btnSubject.ColorContrastOnClick = 45;
-            this.btnSubject.ColorContrastOnHover = 45;
-            this.btnSubject.Cursor = System.Windows.Forms.Cursors.Hand;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btnSubject.CustomizableEdges = borderEdges3;
-            this.btnSubject.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSubject.DisabledBorderColor = System.Drawing.Color.Empty;
-            this.btnSubject.DisabledFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btnSubject.DisabledForecolor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btnSubject.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Pressed;
-            this.btnSubject.Font = new System.Drawing.Font("Century Gothic", 25F, System.Drawing.FontStyle.Bold);
-            this.btnSubject.ForeColor = System.Drawing.Color.White;
-            this.btnSubject.IconLeftCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSubject.IconMarginLeft = 30;
-            this.btnSubject.IconPadding = 10;
-            this.btnSubject.IconRightCursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSubject.IdleBorderColor = System.Drawing.Color.Transparent;
-            this.btnSubject.IdleBorderRadius = 45;
-            this.btnSubject.IdleBorderThickness = 3;
-            this.btnSubject.IdleFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(69)))), ((int)(((byte)(153)))));
-            this.btnSubject.IdleIconLeftImage = null;
-            this.btnSubject.IdleIconRightImage = null;
-            this.btnSubject.IndicateFocus = true;
-            this.btnSubject.Location = new System.Drawing.Point(448, 67);
-            this.btnSubject.Name = "btnSubject";
-            stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(69)))), ((int)(((byte)(153)))));
-            stateProperties5.BorderRadius = 45;
-            stateProperties5.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties5.BorderThickness = 3;
-            stateProperties5.FillColor = System.Drawing.Color.White;
-            stateProperties5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(124)))), ((int)(((byte)(69)))), ((int)(((byte)(153)))));
-            stateProperties5.IconLeftImage = null;
-            stateProperties5.IconRightImage = null;
-            this.btnSubject.onHoverState = stateProperties5;
-            stateProperties6.BorderColor = System.Drawing.Color.White;
-            stateProperties6.BorderRadius = 45;
-            stateProperties6.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            stateProperties6.BorderThickness = 3;
-            stateProperties6.FillColor = System.Drawing.Color.White;
-            stateProperties6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            stateProperties6.IconLeftImage = null;
-            stateProperties6.IconRightImage = null;
-            this.btnSubject.OnPressedState = stateProperties6;
-            this.btnSubject.Size = new System.Drawing.Size(325, 192);
-            this.btnSubject.TabIndex = 5;
-            this.btnSubject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSubject.TextMarginLeft = 0;
-            this.btnSubject.UseDefaultRadiusAndThickness = true;
-            this.btnSubject.Click += new System.EventHandler(this.btnSubject_Click);
             // 
             // H_lecture
             // 
@@ -348,8 +355,15 @@
             this.panel1.ResumeLayout(false);
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.gunaShadowPanel3.ResumeLayout(false);
+            this.gunaShadowPanel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.gunaShadowPanel2.ResumeLayout(false);
+            this.gunaShadowPanel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.gunaShadowPanel1.ResumeLayout(false);
+            this.gunaShadowPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -362,12 +376,25 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Panel panelContainer;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnSubject;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btnLecturer;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblLec;
         private System.Windows.Forms.Label label2;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton bunifuButton1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lblSub;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel3;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label lblSess;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label8;
     }
 }
