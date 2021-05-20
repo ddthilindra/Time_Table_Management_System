@@ -51,7 +51,6 @@ namespace app.Forms.Control
             btnBack.Visible = false;
             loadlec();
             loadSub();
-            loadSess();
         }
 
         private void btnAddLecture_Click(object sender, EventArgs e)
@@ -83,7 +82,7 @@ namespace app.Forms.Control
 
         private void gunaShadowPanel1_MouseClick(object sender, MouseEventArgs e)
         {
-            btnBack.Visible = true;
+            //btnBack.Visible = true;
 
 
             if (!PnlContainer.Controls.Contains(Show_Lecturer.Instance))
@@ -163,37 +162,64 @@ namespace app.Forms.Control
 
         }
 
-        private void gunaShadowPanel3_MouseClick(object sender, MouseEventArgs e)
+        private void label2_MouseClick(object sender, MouseEventArgs e)
         {
-            if (!PnlContainer.Controls.Contains(Show_Session.Instance))
+            if (!PnlContainer.Controls.Contains(Show_Lecturer.Instance))
             {
                 H_lecture.Instance.Dock = DockStyle.None;
-                PnlContainer.Controls.Add(Show_Session.Instance);
-                Show_Session.Instance.Dock = DockStyle.Fill;
-                Show_Session.Instance.BringToFront();
+                PnlContainer.Controls.Add(Show_Lecturer.Instance);
+                Show_Lecturer.Instance.Dock = DockStyle.Fill;
+                Show_Lecturer.Instance.BringToFront();
             }
             else
             {
-                Show_Session.Instance.BringToFront();
+                Show_Lecturer.Instance.BringToFront();
             }
         }
 
-        private void loadSess()
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
         {
-            SqlConnection con = new SqlConnection(myconstr);
-            if (con != null && con.State == ConnectionState.Closed)
+            if (!PnlContainer.Controls.Contains(Show_Lecturer.Instance))
             {
-                con.Open();
+                H_lecture.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Show_Lecturer.Instance);
+                Show_Lecturer.Instance.Dock = DockStyle.Fill;
+                Show_Lecturer.Instance.BringToFront();
             }
-            string sql = "select Count(Id) from Session";
-            SqlCommand cmd;
-            cmd = new SqlCommand(sql, con);
-            Int32 rows_count = Convert.ToInt32(cmd.ExecuteScalar());
-            cmd.Dispose();
-            con.Close();
-            lblSess.Text = rows_count.ToString();
-
+            else
+            {
+                Show_Lecturer.Instance.BringToFront();
+            }
         }
 
+        private void label5_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Show_Subject.Instance))
+            {
+                H_lecture.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Show_Subject.Instance);
+                Show_Subject.Instance.Dock = DockStyle.Fill;
+                Show_Subject.Instance.BringToFront();
+            }
+            else
+            {
+                Show_Subject.Instance.BringToFront();
+            }
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Show_Subject.Instance))
+            {
+                H_lecture.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Show_Subject.Instance);
+                Show_Subject.Instance.Dock = DockStyle.Fill;
+                Show_Subject.Instance.BringToFront();
+            }
+            else
+            {
+                Show_Subject.Instance.BringToFront();
+            }
+        }
     }
 }

@@ -244,7 +244,7 @@
             this.buttonAdd.IdleIconLeftImage = null;
             this.buttonAdd.IdleIconRightImage = null;
             this.buttonAdd.IndicateFocus = true;
-            this.buttonAdd.Location = new System.Drawing.Point(888, 242);
+            this.buttonAdd.Location = new System.Drawing.Point(890, 276);
             this.buttonAdd.Name = "buttonAdd";
             stateProperties9.BorderColor = System.Drawing.Color.White;
             stateProperties9.BorderRadius = 45;
@@ -309,7 +309,7 @@
             this.buttonUpdate.IdleIconLeftImage = null;
             this.buttonUpdate.IdleIconRightImage = null;
             this.buttonUpdate.IndicateFocus = true;
-            this.buttonUpdate.Location = new System.Drawing.Point(688, 242);
+            this.buttonUpdate.Location = new System.Drawing.Point(690, 276);
             this.buttonUpdate.Name = "buttonUpdate";
             stateProperties11.BorderColor = System.Drawing.Color.White;
             stateProperties11.BorderRadius = 45;
@@ -374,7 +374,7 @@
             this.buttonDelete.IdleIconLeftImage = null;
             this.buttonDelete.IdleIconRightImage = null;
             this.buttonDelete.IndicateFocus = true;
-            this.buttonDelete.Location = new System.Drawing.Point(488, 242);
+            this.buttonDelete.Location = new System.Drawing.Point(494, 276);
             this.buttonDelete.Name = "buttonDelete";
             stateProperties13.BorderColor = System.Drawing.Color.White;
             stateProperties13.BorderRadius = 45;
@@ -439,7 +439,7 @@
             this.buttonClear.IdleIconLeftImage = null;
             this.buttonClear.IdleIconRightImage = null;
             this.buttonClear.IndicateFocus = true;
-            this.buttonClear.Location = new System.Drawing.Point(102, 242);
+            this.buttonClear.Location = new System.Drawing.Point(100, 276);
             this.buttonClear.Name = "buttonClear";
             stateProperties15.BorderColor = System.Drawing.Color.White;
             stateProperties15.BorderRadius = 45;
@@ -491,7 +491,7 @@
             this.tblLocation.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
@@ -515,7 +515,7 @@
             this.tblLocation.DefaultCellStyle = dataGridViewCellStyle8;
             this.tblLocation.EnableHeadersVisualStyles = false;
             this.tblLocation.GridColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tblLocation.Location = new System.Drawing.Point(54, 323);
+            this.tblLocation.Location = new System.Drawing.Point(54, 354);
             this.tblLocation.Name = "tblLocation";
             this.tblLocation.ReadOnly = true;
             dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -537,7 +537,7 @@
             this.tblLocation.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Silver;
             this.tblLocation.RowTemplate.Height = 50;
             this.tblLocation.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tblLocation.Size = new System.Drawing.Size(1025, 367);
+            this.tblLocation.Size = new System.Drawing.Size(1025, 332);
             this.tblLocation.TabIndex = 93;
             this.tblLocation.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tblLocation_RowHeaderMouseClick_2);
             // 

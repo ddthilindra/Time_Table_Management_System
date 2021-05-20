@@ -58,6 +58,7 @@
             this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -106,7 +107,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.tblSession.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.tblSession.ColumnHeadersHeight = 40;
+            this.tblSession.ColumnHeadersHeight = 50;
             this.tblSession.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.tblSession.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column7,
@@ -121,6 +122,7 @@
             this.Column8,
             this.Column2,
             this.Column4,
+            this.Column16,
             this.Column14,
             this.Column5,
             this.Column6});
@@ -136,7 +138,7 @@
             this.tblSession.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.DarkGray;
             this.tblSession.RowTemplate.Height = 50;
             this.tblSession.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tblSession.Size = new System.Drawing.Size(1025, 483);
+            this.tblSession.Size = new System.Drawing.Size(1025, 474);
             this.tblSession.TabIndex = 18;
             this.tblSession.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tblSession_CellClick);
             // 
@@ -239,6 +241,14 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
+            // Column16
+            // 
+            this.Column16.DataPropertyName = "Status";
+            this.Column16.HeaderText = "Status";
+            this.Column16.MinimumWidth = 6;
+            this.Column16.Name = "Column16";
+            this.Column16.ReadOnly = true;
+            // 
             // Column14
             // 
             this.Column14.DataPropertyName = "SessionCode";
@@ -303,7 +313,7 @@
             this.bunifuButton3.IdleIconLeftImage = null;
             this.bunifuButton3.IdleIconRightImage = null;
             this.bunifuButton3.IndicateFocus = true;
-            this.bunifuButton3.Location = new System.Drawing.Point(871, 551);
+            this.bunifuButton3.Location = new System.Drawing.Point(867, 542);
             this.bunifuButton3.Name = "bunifuButton3";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             stateProperties7.BorderRadius = 45;
@@ -372,7 +382,7 @@
             this.btnRefresh.IdleIconLeftImage = null;
             this.btnRefresh.IdleIconRightImage = null;
             this.btnRefresh.IndicateFocus = true;
-            this.btnRefresh.Location = new System.Drawing.Point(46, 551);
+            this.btnRefresh.Location = new System.Drawing.Point(46, 542);
             this.btnRefresh.Name = "btnRefresh";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             stateProperties5.BorderRadius = 45;
@@ -514,6 +524,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
         private System.Windows.Forms.DataGridViewButtonColumn Column5;
         private System.Windows.Forms.DataGridViewButtonColumn Column6;

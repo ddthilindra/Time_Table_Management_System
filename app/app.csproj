@@ -156,6 +156,12 @@
     <Compile Include="Forms\Control\H_Session.Designer.cs">
       <DependentUpon>H_Session.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Control\H_Static.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Control\H_Static.Designer.cs">
+      <DependentUpon>H_Static.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Control\H_student.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -173,6 +179,12 @@
     </Compile>
     <Compile Include="Forms\Control\NavBar.Designer.cs">
       <DependentUpon>NavBar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DashMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\DashMenu.Designer.cs">
+      <DependentUpon>DashMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
@@ -228,17 +240,17 @@
     <Compile Include="Forms\Lecturer\Show_Subject.Designer.cs">
       <DependentUpon>Show_Subject.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Lecturer\Update_Lecturer.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Forms\Lecturer\Update_Lecturer.Designer.cs">
-      <DependentUpon>Update_Lecturer.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\Location\AddLocation.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Forms\Location\AddLocation.Designer.cs">
       <DependentUpon>AddLocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Session\ManageSessionRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Session\ManageSessionRoom.Designer.cs">
+      <DependentUpon>ManageSessionRoom.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Session\SessionandNATAllocations.cs">
       <SubType>UserControl</SubType>
@@ -299,6 +311,9 @@
     <EmbeddedResource Include="Forms\Control\H_Session.resx">
       <DependentUpon>H_Session.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Control\H_Static.resx">
+      <DependentUpon>H_Static.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Control\H_student.resx">
       <DependentUpon>H_student.cs</DependentUpon>
     </EmbeddedResource>
@@ -307,6 +322,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Control\NavBar.resx">
       <DependentUpon>NavBar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\DashMenu.resx">
+      <DependentUpon>DashMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -335,11 +353,11 @@
     <EmbeddedResource Include="Forms\Lecturer\Show_Subject.resx">
       <DependentUpon>Show_Subject.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Lecturer\Update_Lecturer.resx">
-      <DependentUpon>Update_Lecturer.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Location\AddLocation.resx">
       <DependentUpon>AddLocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Session\ManageSessionRoom.resx">
+      <DependentUpon>ManageSessionRoom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Session\SessionandNATAllocations.resx">
       <DependentUpon>SessionandNATAllocations.cs</DependentUpon>
@@ -385,13 +403,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database1.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Database1_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Database1.mdf</DependentUpon>
-    </Content>
     <Content Include="TimeTableDB.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

@@ -80,5 +80,95 @@ namespace app.Forms.Control
         {
             loadWdays();
         }
+
+        private void label5_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(FormManageWorkingDays.Instance))
+            {
+                FormManageWorkingDays.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(FormManageWorkingDays.Instance);
+                FormManageWorkingDays.Instance.Dock = DockStyle.Fill;
+                FormManageWorkingDays.Instance.BringToFront();
+            }
+            else
+            {
+                FormManageWorkingDays.Instance.BringToFront();
+            }
+        }
+
+        private void label1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(FormManageWorkingDays.Instance))
+            {
+                FormManageWorkingDays.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(FormManageWorkingDays.Instance);
+                FormManageWorkingDays.Instance.Dock = DockStyle.Fill;
+                FormManageWorkingDays.Instance.BringToFront();
+            }
+            else
+            {
+                FormManageWorkingDays.Instance.BringToFront();
+            }
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(FormManageWorkingDays.Instance))
+            {
+                FormManageWorkingDays.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(FormManageWorkingDays.Instance);
+                FormManageWorkingDays.Instance.Dock = DockStyle.Fill;
+                FormManageWorkingDays.Instance.BringToFront();
+            }
+            else
+            {
+                FormManageWorkingDays.Instance.BringToFront();
+            }
+        }
+
+        private void label8_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(FormAddWorkingDays.Instance))
+            {
+                FormAddWorkingDays.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(FormAddWorkingDays.Instance);
+                FormAddWorkingDays.Instance.Dock = DockStyle.Fill;
+                FormAddWorkingDays.Instance.BringToFront();
+            }
+            else
+            {
+                FormAddWorkingDays.Instance.BringToFront();
+            }
+        }
+
+        private void label7_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(FormAddWorkingDays.Instance))
+            {
+                FormAddWorkingDays.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(FormAddWorkingDays.Instance);
+                FormAddWorkingDays.Instance.Dock = DockStyle.Fill;
+                FormAddWorkingDays.Instance.BringToFront();
+            }
+            else
+            {
+                FormAddWorkingDays.Instance.BringToFront();
+            }
+        }
+
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(FormAddWorkingDays.Instance))
+            {
+                FormAddWorkingDays.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(FormAddWorkingDays.Instance);
+                FormAddWorkingDays.Instance.Dock = DockStyle.Fill;
+                FormAddWorkingDays.Instance.BringToFront();
+            }
+            else
+            {
+                FormAddWorkingDays.Instance.BringToFront();
+            }
+        }
     }
 }

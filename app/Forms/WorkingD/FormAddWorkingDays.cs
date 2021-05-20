@@ -34,6 +34,8 @@ namespace app.Forms.WorkingD
 
         ClassWorkingDays workDays = new ClassWorkingDays();
 
+        FormManageWorkingDays fmd = new FormManageWorkingDays();
+
         ArrayList arr = new ArrayList();
         private void buttonWSave_Click(object sender, EventArgs e)
         {
@@ -93,11 +95,13 @@ namespace app.Forms.WorkingD
             if (success == true)
             {
                 MessageBox.Show("Successfully Inserted");
+                fmd.tableLoad();
             }
             else
             {
                 MessageBox.Show("Error while inserting");
             }
+            
         }
 
         private void buttonWClear_Click(object sender, EventArgs e)

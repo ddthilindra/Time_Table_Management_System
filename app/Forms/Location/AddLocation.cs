@@ -8,15 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using app.Class.Location;
+using System.Data.SqlClient;
+using System.Configuration;
 
 namespace app.Forms.Location
 {
     public partial class AddLocation : UserControl
     {
         ClassLocation c = new ClassLocation();
+
+        //Call Connection string get database info
+        static string myconstr = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
+
+        //Database Connection
+        SqlConnection con = new SqlConnection(myconstr);
+
         public AddLocation()
         {
             InitializeComponent();
+            loadLoc();
+            loadRoom();
         }
 
         static AddLocation _obj;
@@ -37,6 +48,46 @@ namespace app.Forms.Location
         {
             DataTable dt = c.Select();
             tblLocation.DataSource = dt;
+
+            
+        }
+
+        public void loadLoc()
+        {
+            comboBName.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT BuildingName FROM Location";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                comboBName.Items.Add(dr["BuildingName"].ToString());
+            }
+
+            con.Close();
+        }
+
+        public void loadRoom()
+        {
+            combRName.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT BuildingName FROM Location";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                combRName.Items.Add(dr["BuildingName"].ToString());
+            }
+
+            con.Close();
         }
 
         public void Clear()

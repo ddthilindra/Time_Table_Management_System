@@ -26,8 +26,7 @@ namespace app.Forms.Session
             InitializeComponent();
 
             connection = new SqlConnection(myconstr);
-            FillLocationCombo();
-            FillSessionCombo();
+            
         }
 
         //Creating object from this Show_Lecturer to access this form in main menu
@@ -55,11 +54,98 @@ namespace app.Forms.Session
             DataTable dt = NoTimes.Select();
             dataGridView1.DataSource = dt;
 
-            DataTable dtt = LNoTimes.Select();
-            dataGridView2.DataSource = dtt;
+            loadLecturer();
+            loadGroup();
+            loadSubGroup();
+            loadSessionID();
+        }
 
-            DataTable dttt = c.Select();
-            tblSessions.DataSource = dttt;
+        //Database Connection
+        SqlConnection con = new SqlConnection(myconstr);
+        public void loadLecturer()
+        {
+            comboBoxNo1.Items.Clear();
+            comboBox5.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT Name FROM Lecturer";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                comboBoxNo1.Items.Add(dr["Name"].ToString());
+                comboBox5.Items.Add(dr["Name"].ToString());
+            }
+
+            con.Close();
+        }
+
+        public void loadGroup()
+        {
+            comboBoxNo2.Items.Clear();
+            comboBox3.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT GroupID FROM StudentGroups";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                comboBoxNo2.Items.Add(dr["GroupID"].ToString());
+                comboBox3.Items.Add(dr["GroupID"].ToString());
+            }
+
+            con.Close();
+        }
+
+        public void loadSubGroup()
+        {
+            comboBoxNo3.Items.Clear();
+            comboBox4.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT SubGroupID FROM StudentGroups";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                comboBoxNo3.Items.Add(dr["SubGroupID"].ToString());
+                comboBox4.Items.Add(dr["SubGroupID"].ToString());
+            }
+
+            con.Close();
+        }
+
+        public void loadSessionID()
+        {
+            SqlConnection con = new SqlConnection(myconnstrng);
+
+            comboBoxNo4.Items.Clear();
+            comboBox2.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT SessionCode FROM Session";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                comboBoxNo4.Items.Add(dr["SessionCode"].ToString());
+                comboBox2.Items.Add(dr["SessionCode"].ToString());
+            }
+
+            con.Close();
         }
 
         private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
@@ -341,29 +427,47 @@ namespace app.Forms.Session
         ClassNotAvailableTimes NoTimes = new ClassNotAvailableTimes();
         private void btnSave_Click(object sender, EventArgs e)
         {
-            //get value from input field
-
-            NoTimes.SeLecturer = comboBoxNo1.Text;
-            NoTimes.SeGroup = comboBoxNo2.Text;
-            NoTimes.SeSubGroup = comboBoxNo3.Text;
-            NoTimes.SeSessionID = comboBoxNo4.Text;
-            NoTimes.SeTimeDuration = comboBoxNo5.Text;
-            //Insert Data into Database
-            bool success = NoTimes.Insert(NoTimes);
-            if (success == true)
+            if (isformValid())
             {
-                //If insert Successfull show successfully message
-                MessageBox.Show("Not Availble Time Successfully Inserted !!!");
+                //get value from input field
 
-            }
-            else
-            {
-                //If insert is not Successfull show Error message
-                MessageBox.Show("Error while inserting !!!");
+                NoTimes.SeLecturer = comboBoxNo1.Text;
+                NoTimes.SeGroup = comboBoxNo2.Text;
+                NoTimes.SeSubGroup = comboBoxNo3.Text;
+                NoTimes.SeSessionID = comboBoxNo4.Text;
+                NoTimes.SeTimeDuration = comboBoxNo5.Text;
+                //Insert Data into Database
+                bool success = NoTimes.Insert(NoTimes);
+                if (success == true)
+                {
+                    //If insert Successfull show successfully message
+                    MessageBox.Show("Not Availble Time Successfully Inserted !!!");
+                    DataTable dt = NoTimes.Select();
+                    dataGridView1.DataSource = dt;
+
+                }
+                else
+                {
+                    //If insert is not Successfull show Error message
+                    MessageBox.Show("Error while inserting !!!");
+                }
             }
         }
 
-//################################################################################
+        private bool isformValid()
+        {
+            if (comboBoxNo1.Text.ToString().Trim() == string.Empty || comboBoxNo2.Text.ToString().Trim() == string.Empty || comboBoxNo3.Text.Trim() == string.Empty || comboBoxNo4.Text.Trim() == string.Empty || comboBoxNo5.Text.Trim() == string.Empty)
+            {
+                MessageBox.Show("Please fill out the all field", "Information", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        //################################################################################
 
         private void buttonNoSave_Click(object sender, EventArgs e)
         {
@@ -385,29 +489,7 @@ namespace app.Forms.Session
 
         }
         ClassLocationNotAvailableTimes LNoTimes = new ClassLocationNotAvailableTimes();
-        private void btnLocNATSave_Click(object sender, EventArgs e)
-        {
-            //get value from input field
-            
-            LNoTimes.SeRoom = comboBoxLNo1.Text;
-            LNoTimes.SeDay = comboBoxLNo2.Text;
-            LNoTimes.STime = comboBoxLNo3.Text;
-            LNoTimes.Etime = comboBoxLNo4.Text;
-
-            //Insert Data into Database
-            bool success = LNoTimes.Insert(LNoTimes);
-            if (success == true)
-            {
-                //If insert Successfull show successfully message
-                MessageBox.Show(" Not Availble Time Successfully Inserted !!!");
-
-            }
-            else
-            {
-                //If insert is not Successfull show Error message
-                MessageBox.Show("Try Again");
-            }
-        }
+        
 
         ClassLocationNotAvailableTimes wdd = new ClassLocationNotAvailableTimes();
 
@@ -416,13 +498,7 @@ namespace app.Forms.Session
 
         private void dataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            int rowIndex = e.RowIndex;
-            ID = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
-            SeLecturer = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
-            SeGroup = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
-            SeSubGroup = dataGridView1.Rows[rowIndex].Cells[3].Value.ToString();
-            SeSessionID = dataGridView1.Rows[rowIndex].Cells[4].Value.ToString();
-            SeTimeDuration = dataGridView1.Rows[rowIndex].Cells[5].Value.ToString();
+            
         }
 
         string IDD, SeRoom, SeDay, SeTime, ETime;
@@ -443,87 +519,27 @@ namespace app.Forms.Session
             }
         }
 
+        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_RowHeaderMouseClick_2(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int rowIndex = e.RowIndex;
+            ID = dataGridView1.Rows[rowIndex].Cells[0].Value.ToString();
+            SeLecturer = dataGridView1.Rows[rowIndex].Cells[1].Value.ToString();
+            SeGroup = dataGridView1.Rows[rowIndex].Cells[2].Value.ToString();
+            SeSubGroup = dataGridView1.Rows[rowIndex].Cells[3].Value.ToString();
+            SeSessionID = dataGridView1.Rows[rowIndex].Cells[4].Value.ToString();
+            SeTimeDuration = dataGridView1.Rows[rowIndex].Cells[5].Value.ToString();
+        }
+
         static string myconnstrng = ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
 
         ClassMngsessions c = new ClassMngsessions();
 
-        public void Clear()
-        {
-            comboSroom.Text = "";
-            comboSsession.Text = "";
-        }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Clear();
-        }
-
-        private void bunifuButton1_Click(object sender, EventArgs e)
-        {
-            //get input values 
-            c.SessionName = comboSsession.Text;
-            c.SessionRoom = comboSroom.Text;
-
-
-            //into db
-            bool success = c.Insert(c);
-            if (success == true)
-            {
-                MessageBox.Show("New Session Added Successfully!");
-                //clear method
-                Clear();
-            }
-            else
-            {
-                MessageBox.Show("Try again");
-            }
-
-            //Load data into table
-            DataTable dt = c.Select();
-            tblSessions.DataSource = dt;
-        }
-
-        public void FillSessionCombo()
-        {
-            SqlConnection con = new SqlConnection(myconnstrng);
-
-            comboSsession.Items.Clear();
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT Lecturer1,SubjectCode,SubjectName,Tag FROM Session";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
-            {
-                comboSsession.Items.Add(dr["Lecturer1"].ToString() + "      " + dr["SubjectCode"].ToString() + "     " + dr["SubjectName"].ToString() + "       " + dr["Tag"].ToString());
-            }
-
-            con.Close();
-        }
-
-        public void FillLocationCombo()
-        {
-            SqlConnection con = new SqlConnection(myconnstrng);
-
-            comboSroom.Items.Clear();
-            con.Open();
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT RoomName,RoomType,Capacity FROM Location";
-            cmd.ExecuteNonQuery();
-            DataTable dt = new DataTable();
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
-            da.Fill(dt);
-            foreach (DataRow dr in dt.Rows)
-            {
-                comboSroom.Items.Add(dr["RoomName"].ToString() + "  " + dr["RoomType"].ToString() + "   Capacity - " + dr["Capacity"].ToString());
-            }
-
-            con.Close();
-        }
 
         private void btnClear_Click(object sender, EventArgs e)
         {
@@ -544,76 +560,6 @@ namespace app.Forms.Session
             comboBox1.Text = string.Empty;
         }
 
-        private void btnLocNATClear_Click(object sender, EventArgs e)
-        {
-            comboBoxLNo1.Text = string.Empty;
-            comboBoxLNo2.Text = string.Empty;
-            comboBoxLNo3.Text = string.Empty;
-            comboBoxLNo4.Text = string.Empty;
-        }
-
-        private void bntMNATLocClear_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = string.Empty;
-            comboBox9.Text = string.Empty;
-            comboBox8.Text = string.Empty;
-            comboBox6.Text = string.Empty;
-            comboBox7.Text = string.Empty;
-        }
-
-        int xx = 0;
-
-        private void btnNATLocUpdt_Click(object sender, EventArgs e)
-        {
-            textBox1.Text = IDD;
-            comboBox9.Text = SeRoom;
-            comboBox8.Text = SeDay;
-            comboBox6.Text = SeTime;
-            comboBox7.Text = ETime;
-        }
-
-        private void dataGridView2_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            int rowIndex = e.RowIndex;
-            IDD = dataGridView2.Rows[rowIndex].Cells[0].Value.ToString();
-            SeRoom = dataGridView2.Rows[rowIndex].Cells[1].Value.ToString();
-            SeDay = dataGridView2.Rows[rowIndex].Cells[2].Value.ToString();
-            SeTime = dataGridView2.Rows[rowIndex].Cells[3].Value.ToString();
-            ETime = dataGridView2.Rows[rowIndex].Cells[4].Value.ToString();
-        }
-
-        private void bntMNATLocSave_Click(object sender, EventArgs e)
-        {
-            int x = Int32.Parse(textBox1.Text);
-            LNoTimes.Id = x;
-
-            LNoTimes.SeRoom = comboBox9.Text;
-            LNoTimes.SeDay = comboBox8.Text;
-            LNoTimes.STime = comboBox6.Text;
-            LNoTimes.Etime = comboBox7.Text;
-
-
-            bool s = LNoTimes.Update(LNoTimes);
-
-            if (s == true)
-            {
-                MessageBox.Show("Update Successfull !!!");
-            }
-            else
-            {
-                MessageBox.Show("UnSuccessfull !!!");
-            }
-
-            using (SqlConnection con = new SqlConnection(myconstr))
-            {
-                con.Open();
-                SqlDataAdapter sad = new SqlDataAdapter("SELECT *FROM  NATLocation WHERE Id = '" + textBox1.Text.Trim() + "'", con);
-                DataTable dt = new DataTable();
-                _ = sad.Fill(dt);
-
-                dataGridView1.DataSource = dt;
-            }
-        }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -644,6 +590,8 @@ namespace app.Forms.Session
             if (s == true)
             {
                 MessageBox.Show("Delete Successfull !!!");
+                DataTable dt = NoTimes.Select();
+                dataGridView1.DataSource = dt;
             }
             else
             {

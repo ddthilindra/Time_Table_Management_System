@@ -36,12 +36,6 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.panelContainer = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.gunaShadowPanel3 = new Guna.UI.WinForms.GunaShadowPanel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.lblSess = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.gunaShadowPanel2 = new Guna.UI.WinForms.GunaShadowPanel();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -57,8 +51,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panelContainer.SuspendLayout();
-            this.gunaShadowPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.gunaShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.gunaShadowPanel1.SuspendLayout();
@@ -100,7 +92,6 @@
             // panelContainer
             // 
             this.panelContainer.Controls.Add(this.label8);
-            this.panelContainer.Controls.Add(this.gunaShadowPanel3);
             this.panelContainer.Controls.Add(this.gunaShadowPanel2);
             this.panelContainer.Controls.Add(this.gunaShadowPanel1);
             this.panelContainer.Controls.Add(this.label1);
@@ -121,76 +112,6 @@
             this.label8.Size = new System.Drawing.Size(697, 49);
             this.label8.TabIndex = 11;
             this.label8.Text = "Time Table Management System";
-            // 
-            // gunaShadowPanel3
-            // 
-            this.gunaShadowPanel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaShadowPanel3.BaseColor = System.Drawing.Color.White;
-            this.gunaShadowPanel3.Controls.Add(this.label7);
-            this.gunaShadowPanel3.Controls.Add(this.pictureBox4);
-            this.gunaShadowPanel3.Controls.Add(this.lblSess);
-            this.gunaShadowPanel3.Controls.Add(this.label9);
-            this.gunaShadowPanel3.Controls.Add(this.label10);
-            this.gunaShadowPanel3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaShadowPanel3.Location = new System.Drawing.Point(101, 384);
-            this.gunaShadowPanel3.Name = "gunaShadowPanel3";
-            this.gunaShadowPanel3.Radius = 6;
-            this.gunaShadowPanel3.ShadowColor = System.Drawing.Color.Black;
-            this.gunaShadowPanel3.ShadowShift = 8;
-            this.gunaShadowPanel3.Size = new System.Drawing.Size(325, 192);
-            this.gunaShadowPanel3.TabIndex = 10;
-            this.gunaShadowPanel3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.gunaShadowPanel3_MouseClick);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            this.label7.Location = new System.Drawing.Point(227, 118);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(0, 37);
-            this.label7.TabIndex = 1;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(19, 22);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(82, 81);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox4.TabIndex = 0;
-            this.pictureBox4.TabStop = false;
-            // 
-            // lblSess
-            // 
-            this.lblSess.AutoSize = true;
-            this.lblSess.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Bold);
-            this.lblSess.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.lblSess.Location = new System.Drawing.Point(241, 118);
-            this.lblSess.Name = "lblSess";
-            this.lblSess.Size = new System.Drawing.Size(30, 37);
-            this.lblSess.TabIndex = 1;
-            this.lblSess.Text = "s";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 22F, System.Drawing.FontStyle.Bold);
-            this.label9.ForeColor = System.Drawing.Color.DarkSlateBlue;
-            this.label9.Location = new System.Drawing.Point(107, 33);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(150, 44);
-            this.label9.TabIndex = 1;
-            this.label9.Text = "Session";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(164, 155);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(128, 17);
-            this.label10.TabIndex = 2;
-            this.label10.Text = "Number of Session";
             // 
             // gunaShadowPanel2
             // 
@@ -231,6 +152,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
             // 
             // lblSub
             // 
@@ -253,6 +175,7 @@
             this.label5.Size = new System.Drawing.Size(154, 44);
             this.label5.TabIndex = 1;
             this.label5.Text = "Subject";
+            this.label5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label5_MouseClick);
             // 
             // label6
             // 
@@ -302,6 +225,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
             // 
             // label2
             // 
@@ -313,6 +237,7 @@
             this.label2.Size = new System.Drawing.Size(165, 44);
             this.label2.TabIndex = 1;
             this.label2.Text = "Lecturer";
+            this.label2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label2_MouseClick);
             // 
             // label4
             // 
@@ -355,9 +280,6 @@
             this.panel1.ResumeLayout(false);
             this.panelContainer.ResumeLayout(false);
             this.panelContainer.PerformLayout();
-            this.gunaShadowPanel3.ResumeLayout(false);
-            this.gunaShadowPanel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.gunaShadowPanel2.ResumeLayout(false);
             this.gunaShadowPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -389,12 +311,6 @@
         private System.Windows.Forms.Label lblSub;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private Guna.UI.WinForms.GunaShadowPanel gunaShadowPanel3;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label lblSess;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label8;
     }
 }

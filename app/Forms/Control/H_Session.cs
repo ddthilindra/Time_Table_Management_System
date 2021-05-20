@@ -47,6 +47,46 @@ namespace app.Forms.Control
 
         private void bunifuShadowPanel1_MouseClick_1(object sender, MouseEventArgs e)
         {
+            
+        }
+
+        private void tab2_MouseClick(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void gunaShadowPanel3_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(ManageSessionRoom.Instance))
+            {
+                ManageSessionRoom.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(ManageSessionRoom.Instance);
+                ManageSessionRoom.Instance.Dock = DockStyle.Fill;
+                ManageSessionRoom.Instance.BringToFront();
+            }
+            else
+            {
+                ManageSessionRoom.Instance.BringToFront();
+            }
+        }
+
+        private void gunaShadowPanel2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(SessionandNATAllocations.Instance))
+            {
+                SessionandNATAllocations.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(SessionandNATAllocations.Instance);
+                SessionandNATAllocations.Instance.Dock = DockStyle.Fill;
+                SessionandNATAllocations.Instance.BringToFront();
+            }
+            else
+            {
+                SessionandNATAllocations.Instance.BringToFront();
+            }
+        }
+
+        private void gunaShadowPanel1_MouseClick(object sender, MouseEventArgs e)
+        {
             if (!PnlContainer.Controls.Contains(Show_Session.Instance))
             {
                 H_lecture.Instance.Dock = DockStyle.None;
@@ -60,7 +100,7 @@ namespace app.Forms.Control
             }
         }
 
-        private void tab2_MouseClick(object sender, MouseEventArgs e)
+        private void label4_MouseClick(object sender, MouseEventArgs e)
         {
             if (!PnlContainer.Controls.Contains(SessionandNATAllocations.Instance))
             {
@@ -72,6 +112,126 @@ namespace app.Forms.Control
             else
             {
                 SessionandNATAllocations.Instance.BringToFront();
+            }
+        }
+
+        private void label3_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(SessionandNATAllocations.Instance))
+            {
+                SessionandNATAllocations.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(SessionandNATAllocations.Instance);
+                SessionandNATAllocations.Instance.Dock = DockStyle.Fill;
+                SessionandNATAllocations.Instance.BringToFront();
+            }
+            else
+            {
+                SessionandNATAllocations.Instance.BringToFront();
+            }
+        }
+
+        private void label10_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Show_Session.Instance))
+            {
+                H_lecture.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Show_Session.Instance);
+                Show_Session.Instance.Dock = DockStyle.Fill;
+                Show_Session.Instance.BringToFront();
+            }
+            else
+            {
+                Show_Session.Instance.BringToFront();
+            }
+        }
+
+        private void label2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Show_Session.Instance))
+            {
+                H_lecture.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Show_Session.Instance);
+                Show_Session.Instance.Dock = DockStyle.Fill;
+                Show_Session.Instance.BringToFront();
+            }
+            else
+            {
+                Show_Session.Instance.BringToFront();
+            }
+        }
+
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Show_Session.Instance))
+            {
+                H_lecture.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Show_Session.Instance);
+                Show_Session.Instance.Dock = DockStyle.Fill;
+                Show_Session.Instance.BringToFront();
+            }
+            else
+            {
+                Show_Session.Instance.BringToFront();
+            }
+        }
+
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(SessionandNATAllocations.Instance))
+            {
+                SessionandNATAllocations.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(SessionandNATAllocations.Instance);
+                SessionandNATAllocations.Instance.Dock = DockStyle.Fill;
+                SessionandNATAllocations.Instance.BringToFront();
+            }
+            else
+            {
+                SessionandNATAllocations.Instance.BringToFront();
+            }
+        }
+
+        private void label7_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(ManageSessionRoom.Instance))
+            {
+                ManageSessionRoom.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(ManageSessionRoom.Instance);
+                ManageSessionRoom.Instance.Dock = DockStyle.Fill;
+                ManageSessionRoom.Instance.BringToFront();
+            }
+            else
+            {
+                ManageSessionRoom.Instance.BringToFront();
+            }
+        }
+
+        private void label9_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(ManageSessionRoom.Instance))
+            {
+                ManageSessionRoom.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(ManageSessionRoom.Instance);
+                ManageSessionRoom.Instance.Dock = DockStyle.Fill;
+                ManageSessionRoom.Instance.BringToFront();
+            }
+            else
+            {
+                ManageSessionRoom.Instance.BringToFront();
+            }
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(ManageSessionRoom.Instance))
+            {
+                ManageSessionRoom.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(ManageSessionRoom.Instance);
+                ManageSessionRoom.Instance.Dock = DockStyle.Fill;
+                ManageSessionRoom.Instance.BringToFront();
+            }
+            else
+            {
+                ManageSessionRoom.Instance.BringToFront();
             }
         }
     }

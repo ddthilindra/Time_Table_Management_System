@@ -17,6 +17,7 @@ namespace app.Forms.Control
         public H_GenerateTimeT()
         {
             InitializeComponent();
+            createLecTable();
         }
 
         //Call Connection string get database info
@@ -40,89 +41,47 @@ namespace app.Forms.Control
         }
 
         private void H_GenerateTimeT_Load(object sender, EventArgs e)
-        {
-            //getLectureList();
+        {            
             loadLec();
-            lecturersCombo.SelectedIndex = -1;
+            loadGroup();
+            loadLoc();
 
-            lectureGrid.RowTemplate.Height = 30;
-            lectureGrid.AutoResizeColumns();
-            lectureGrid.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            lectureGrid.RowTemplate.Height = 40;
             lectureGrid.DataSource = createLecTable();
 
+            grpTbl.RowTemplate.Height = 40;
+            grpTbl.DataSource = createLecTable();
+
+            locTbl.RowTemplate.Height = 40;
+            locTbl.DataSource = createLecTable();
         }
+        private string[] subArr;
+        private string[] subArr2;
 
-        private void getLecturerTable(int id)
+        private void btnClear_Click(object sender, EventArgs e)
         {
-
-            DataTable dt = getLecturerTableData(id);
-            foreach (DataRow row in dt.Rows)
-            {
-                DateTime enteredDate = DateTime.Parse(row["day"].ToString());
-                DayOfWeek dow = enteredDate.DayOfWeek; //enum
-                string str = dow.ToString();
-
-                string lecFromTime = row["timeFrom"].ToString();
-                string lecToTime = row["timeTo"].ToString();
-
-                string sessionFromTextAmPm = lecFromTime.Substring(lecFromTime.Length - 2);
-                string sessionToTextAmPm = lecToTime.Substring(lecToTime.Length - 2);
-                string sessionfromText = lecFromTime.Remove(lecFromTime.Length - 2);
-                string sessiontoText = lecToTime.Remove(lecToTime.Length - 2);
-                DateTime lecDay = Convert.ToDateTime(row["day"]);
-
-                if (lecDay.Month == DateTime.Now.Month && lecDay.Year == DateTime.Now.Year && DatesAreInTheSameWeek(lecDay, DateTime.Now))
-                {
-                    int rowNo = getRowNo(sessionfromText);
-                    int diff = 0;
-                    if (sessionFromTextAmPm == sessionToTextAmPm)
-                    {
-                        diff = Convert.ToInt16(decimal.Parse(sessiontoText) - decimal.Parse(sessionfromText));
-                    }
-                    else
-                    {
-                        diff = Convert.ToInt16(decimal.Parse(sessiontoText) - decimal.Parse(sessionfromText)) + 12;
-                    }
-
-
-                    for (int x = 0; x < diff; x++)
-                    {
-                        var row1 = this.lectureGrid.Rows[rowNo + x];
-                        row1.Cells[str].Value = row["session"].ToString();
-
-                    }
-                }
-            }
-
+            createSlot();
+        }
+        int a, b;
+        private void createSlot()
+        {
+            string lecSlt = lecturersCombo.Text.Trim();
             
-        }
-        //DB connection
-        //static string myconstr = System.Configuration.ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
+            subArr = lecSlt.Split('-');
+            string sessionC = chkSessCode(subArr[0]);
+            String td = chksessionTime(sessionC);
+            
+            subArr2 = td.Split('-');
+            string st = subArr2[0];
+            string et = subArr2[1];
 
-        private DataTable getLecturerTableData(int id)
-        {
-            DataTable dt = new DataTable();
-            using (SqlConnection con = new SqlConnection(myconstr))
-            {
-                using (SqlCommand cmd = new SqlCommand("getLecTimeTable", con))
-                {
-                    //cmd.CommandType = CommandType.StoredProcedure;
-                    //cmd.Parameters.AddWithValue("@id", id);
-                    con.Open();
-                    SqlDataReader sdr = cmd.ExecuteReader();
-                    dt.Load(sdr);
-                }
-            }
-            return dt;
-        }
+            int a = -1; 
+            a=getRowNo(subArr2[0]);
+            int b = -1; 
+            b=getRowNo(subArr2[1]);                     
 
-        private bool DatesAreInTheSameWeek(DateTime date1, DateTime date2)
-        {
-            var cal = System.Globalization.DateTimeFormatInfo.CurrentInfo.Calendar;
-            var d1 = date1.Date.AddDays(-1 * (int)cal.GetDayOfWeek(date1));
-            var d2 = date2.Date.AddDays(-1 * (int)cal.GetDayOfWeek(date2));
-
-            return d1 == d2;
+            MessageBox.Show(subArr2[0]+ subArr2[1]);
+            MessageBox.Show(sessionC);
         }
 
         private int getRowNo(string time)
@@ -152,29 +111,42 @@ namespace app.Forms.Control
             }
         }
 
-        private void getLectureList()
-        {
-            lecturersCombo.DataSource = getLectureListData();
-            lecturersCombo.DisplayMember = "Name";
-            lecturersCombo.ValueMember = "ID";
+        string n,m;
+
+        private string chkSessCode(string name)
+        {                        
+            string q= "SELECT SessionCode FROM Session WHERE Lecturer1 = '"+name+"'";
+            SqlCommand cmd = new SqlCommand(q, con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
+            {
+                while (dr.Read())
+                {
+                    m = dr.GetString(0);
+                }                    
+            }
+            dr.Close();
+            con.Close();
+            return m;
         }
 
-        private DataTable getLectureListData()
+        private string chksessionTime(string sc)
         {
-            DataTable dt = new DataTable();
-            using (SqlConnection con = new SqlConnection(myconstr))
+            string q = "SELECT SeTimeDuration FROM Time WHERE SeSessionID='"+sc+"'";
+            SqlCommand cmd = new SqlCommand(q, con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();
+            if (dr.HasRows)
             {
-                String sql = "SELECT * FROM Lecturer";
-                
-                using (SqlCommand cmd = new SqlCommand(sql, con))
+                while (dr.Read())
                 {
-                    //cmd.CommandType = CommandType.StoredProcedure;
-                    con.Open();
-                    SqlDataReader dr = cmd.ExecuteReader();
-                    dt.Load(dr);
+                    n = dr.GetString(0);
                 }
             }
-            return dt;
+            dr.Close();
+            con.Close();
+            return n;
         }
 
         private DataTable createLecTable()
@@ -227,50 +199,7 @@ namespace app.Forms.Control
 
             return dt;
         }
-
-        private void btnClear_Click(object sender, EventArgs e)
-        {
-            string q = string.Empty;
-
-            string lec = (string)lecturersCombo.SelectedItem;
-
-            q = q.Remove(q.Length - 2, 1);
-
-            string sql = string.Format("Select (0) from Session", q);
-
-            using (SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString))
-            {
-                SqlCommand cmd = new SqlCommand(sql, con) 
-                { 
-                    CommandType = CommandType.Text 
-                };
-                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-
-                using(DataTable dt = new DataTable("session"))
-                {
-                    adapter.Fill(dt);
-                }
-            }
-
-            /*clerLecGrid();
-            int licId = Convert.ToInt32(lecturersCombo.SelectedValue);
-            getLecturerTable(licId);*/
-        }
-    
-
-        private void clerLecGrid()
-        {
-
-            for (int i = 1; i < lectureGrid.Columns.Count; i++)
-            {
-                foreach (DataGridViewRow myRow in lectureGrid.Rows)
-                {
-                    myRow.Cells[i].Value = null;
-                }
-            }
-
-        }        
-
+        
         //Method to load all Subject Name and Subject Code
         public void loadLec()
         {
@@ -286,6 +215,44 @@ namespace app.Forms.Control
             foreach (DataRow dr in dt.Rows)
             {
                 lecturersCombo.Items.Add(dr["Name"].ToString() + "-" + dr["LecturerID"].ToString());
+            }
+
+            con.Close();
+        }
+
+        public void loadGroup()
+        {
+            drpStuG.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT GroupID FROM StudentGroups";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                drpStuG.Items.Add(dr["GroupID"].ToString());
+            }
+
+            con.Close();
+        }
+
+        public void loadLoc()
+        {
+            drpLoc.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT BuildingName FROM Location";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                drpLoc.Items.Add(dr["BuildingName"].ToString());
             }
 
             con.Close();

@@ -16,7 +16,7 @@ namespace app
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Forms.Form_Dashbord());
+            Application.Run(new Forms.DashMenu());
         }
     }
 }

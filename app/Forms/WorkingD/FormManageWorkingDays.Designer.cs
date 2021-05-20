@@ -154,7 +154,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxTu2.Location = new System.Drawing.Point(287, 534);
+            this.comboBoxTu2.Location = new System.Drawing.Point(287, 520);
             this.comboBoxTu2.Name = "comboBoxTu2";
             this.comboBoxTu2.Size = new System.Drawing.Size(121, 24);
             this.comboBoxTu2.TabIndex = 80;
@@ -175,7 +175,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxW2.Location = new System.Drawing.Point(425, 534);
+            this.comboBoxW2.Location = new System.Drawing.Point(425, 520);
             this.comboBoxW2.Name = "comboBoxW2";
             this.comboBoxW2.Size = new System.Drawing.Size(121, 24);
             this.comboBoxW2.TabIndex = 79;
@@ -196,7 +196,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxTh2.Location = new System.Drawing.Point(565, 534);
+            this.comboBoxTh2.Location = new System.Drawing.Point(565, 520);
             this.comboBoxTh2.Name = "comboBoxTh2";
             this.comboBoxTh2.Size = new System.Drawing.Size(121, 24);
             this.comboBoxTh2.TabIndex = 78;
@@ -217,7 +217,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxF2.Location = new System.Drawing.Point(701, 534);
+            this.comboBoxF2.Location = new System.Drawing.Point(701, 520);
             this.comboBoxF2.Name = "comboBoxF2";
             this.comboBoxF2.Size = new System.Drawing.Size(121, 24);
             this.comboBoxF2.TabIndex = 77;
@@ -238,7 +238,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxS2.Location = new System.Drawing.Point(840, 534);
+            this.comboBoxS2.Location = new System.Drawing.Point(840, 520);
             this.comboBoxS2.Name = "comboBoxS2";
             this.comboBoxS2.Size = new System.Drawing.Size(121, 24);
             this.comboBoxS2.TabIndex = 76;
@@ -259,7 +259,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxSu2.Location = new System.Drawing.Point(974, 534);
+            this.comboBoxSu2.Location = new System.Drawing.Point(974, 520);
             this.comboBoxSu2.Name = "comboBoxSu2";
             this.comboBoxSu2.Size = new System.Drawing.Size(121, 24);
             this.comboBoxSu2.TabIndex = 75;
@@ -280,7 +280,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxTu1.Location = new System.Drawing.Point(287, 483);
+            this.comboBoxTu1.Location = new System.Drawing.Point(287, 469);
             this.comboBoxTu1.Name = "comboBoxTu1";
             this.comboBoxTu1.Size = new System.Drawing.Size(121, 24);
             this.comboBoxTu1.TabIndex = 74;
@@ -301,7 +301,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxW1.Location = new System.Drawing.Point(425, 483);
+            this.comboBoxW1.Location = new System.Drawing.Point(425, 469);
             this.comboBoxW1.Name = "comboBoxW1";
             this.comboBoxW1.Size = new System.Drawing.Size(121, 24);
             this.comboBoxW1.TabIndex = 73;
@@ -322,7 +322,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxTh1.Location = new System.Drawing.Point(565, 483);
+            this.comboBoxTh1.Location = new System.Drawing.Point(565, 469);
             this.comboBoxTh1.Name = "comboBoxTh1";
             this.comboBoxTh1.Size = new System.Drawing.Size(121, 24);
             this.comboBoxTh1.TabIndex = 72;
@@ -343,7 +343,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxF1.Location = new System.Drawing.Point(701, 483);
+            this.comboBoxF1.Location = new System.Drawing.Point(701, 469);
             this.comboBoxF1.Name = "comboBoxF1";
             this.comboBoxF1.Size = new System.Drawing.Size(121, 24);
             this.comboBoxF1.TabIndex = 71;
@@ -364,7 +364,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxS1.Location = new System.Drawing.Point(840, 483);
+            this.comboBoxS1.Location = new System.Drawing.Point(840, 469);
             this.comboBoxS1.Name = "comboBoxS1";
             this.comboBoxS1.Size = new System.Drawing.Size(121, 24);
             this.comboBoxS1.TabIndex = 70;
@@ -385,7 +385,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxSu1.Location = new System.Drawing.Point(974, 483);
+            this.comboBoxSu1.Location = new System.Drawing.Point(974, 469);
             this.comboBoxSu1.Name = "comboBoxSu1";
             this.comboBoxSu1.Size = new System.Drawing.Size(121, 24);
             this.comboBoxSu1.TabIndex = 69;
@@ -406,7 +406,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxM2.Location = new System.Drawing.Point(143, 534);
+            this.comboBoxM2.Location = new System.Drawing.Point(143, 520);
             this.comboBoxM2.Name = "comboBoxM2";
             this.comboBoxM2.Size = new System.Drawing.Size(121, 24);
             this.comboBoxM2.TabIndex = 68;
@@ -427,7 +427,7 @@
             "16.30",
             "17.30",
             "18.30"});
-            this.comboBoxM1.Location = new System.Drawing.Point(143, 483);
+            this.comboBoxM1.Location = new System.Drawing.Point(143, 469);
             this.comboBoxM1.Name = "comboBoxM1";
             this.comboBoxM1.Size = new System.Drawing.Size(121, 24);
             this.comboBoxM1.TabIndex = 67;
@@ -724,7 +724,7 @@
             this.button2.IdleIconLeftImage = null;
             this.button2.IdleIconRightImage = null;
             this.button2.IndicateFocus = true;
-            this.button2.Location = new System.Drawing.Point(751, 575);
+            this.button2.Location = new System.Drawing.Point(751, 555);
             this.button2.Name = "button2";
             stateProperties5.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             stateProperties5.BorderRadius = 45;
@@ -789,7 +789,7 @@
             this.button1.IdleIconLeftImage = null;
             this.button1.IdleIconRightImage = null;
             this.button1.IndicateFocus = true;
-            this.button1.Location = new System.Drawing.Point(951, 575);
+            this.button1.Location = new System.Drawing.Point(951, 555);
             this.button1.Name = "button1";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             stateProperties7.BorderRadius = 45;
@@ -836,13 +836,13 @@
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold);
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.ColumnHeadersHeight = 40;
+            this.dataGridView1.ColumnHeadersHeight = 50;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,

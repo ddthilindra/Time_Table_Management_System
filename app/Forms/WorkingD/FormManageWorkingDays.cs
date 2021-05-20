@@ -65,6 +65,10 @@ namespace app.Forms.WorkingD
             InitializeComponent();
         }
         ArrayList arr = new ArrayList();
+
+        //DB connection
+        static string myconstr = System.Configuration.ConfigurationManager.ConnectionStrings["ConnString"].ConnectionString;
+
         private void button1_Click(object sender, EventArgs e)
         {
             if (checkBoxMO.Checked)
@@ -129,7 +133,7 @@ namespace app.Forms.WorkingD
                 MessageBox.Show("UnSuccessfull");
             }
 
-            using (SqlConnection con = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\94770\source\repos\Member3 new\Member3 new\WorkingDays.mdf;Integrated Security=True"))
+            using (SqlConnection con = new SqlConnection(myconstr))
             {
                 con.Open();
                 SqlDataAdapter sad = new SqlDataAdapter("SELECT *FROM  Work WHERE Id = '" + textBox2.Text.Trim() + "'", con);
@@ -158,6 +162,12 @@ namespace app.Forms.WorkingD
             {
                 MessageBox.Show("UnSuccessfull");
             }
+            DataTable dt = wd.select();
+            dataGridView1.DataSource = dt;
+        }
+
+        public void tableLoad()
+        {
             DataTable dt = wd.select();
             dataGridView1.DataSource = dt;
         }

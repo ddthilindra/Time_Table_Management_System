@@ -42,7 +42,7 @@ namespace app.Class.Lecturer
             {
                 //Select query
                 con.Open();
-                string sql = "SELECT Id,Faculty,Lecturer1,Lecturer2,SubjectName,SubjectCode,Tag,GroupID,SubGroupID,Year,NumOfStu,Duration FROM Session";
+                string sql = "SELECT Id,Faculty,Lecturer1,Lecturer2,SubjectName,SubjectCode,Tag,GroupID,SubGroupID,Year,NumOfStu,Duration,Status FROM Session";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 

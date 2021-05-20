@@ -123,6 +123,7 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox5_MouseClick);
             // 
             // label17
             // 
@@ -134,6 +135,7 @@
             this.label17.Size = new System.Drawing.Size(62, 32);
             this.label17.TabIndex = 1;
             this.label17.Text = "Tag";
+            this.label17.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label17_MouseClick);
             // 
             // label18
             // 
@@ -145,6 +147,7 @@
             this.label18.Size = new System.Drawing.Size(105, 44);
             this.label18.TabIndex = 1;
             this.label18.Text = "Add ";
+            this.label18.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label18_MouseClick);
             // 
             // gunaShadowPanel3
             // 
@@ -185,6 +188,7 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox4_MouseClick);
             // 
             // lblTm
             // 
@@ -207,6 +211,7 @@
             this.label12.Size = new System.Drawing.Size(192, 32);
             this.label12.TabIndex = 1;
             this.label12.Text = "Management";
+            this.label12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label12_MouseClick);
             // 
             // label13
             // 
@@ -218,6 +223,7 @@
             this.label13.Size = new System.Drawing.Size(84, 44);
             this.label13.TabIndex = 1;
             this.label13.Text = "Tag";
+            this.label13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label13_MouseClick);
             // 
             // label14
             // 
@@ -254,6 +260,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseClick);
             // 
             // label7
             // 
@@ -265,6 +272,7 @@
             this.label7.Size = new System.Drawing.Size(112, 32);
             this.label7.TabIndex = 1;
             this.label7.Text = "Student";
+            this.label7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label7_MouseClick);
             // 
             // label8
             // 
@@ -276,6 +284,7 @@
             this.label8.Size = new System.Drawing.Size(105, 44);
             this.label8.TabIndex = 1;
             this.label8.Text = "Add ";
+            this.label8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label8_MouseClick);
             // 
             // gunaShadowPanel2
             // 
@@ -316,6 +325,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox3_MouseClick);
             // 
             // lblStM
             // 
@@ -338,6 +348,7 @@
             this.label1.Size = new System.Drawing.Size(192, 32);
             this.label1.TabIndex = 1;
             this.label1.Text = "Management";
+            this.label1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label1_MouseClick);
             // 
             // label5
             // 
@@ -349,6 +360,7 @@
             this.label5.Size = new System.Drawing.Size(153, 44);
             this.label5.TabIndex = 1;
             this.label5.Text = "Student";
+            this.label5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.label5_MouseClick);
             // 
             // label6
             // 

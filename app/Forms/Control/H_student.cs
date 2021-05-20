@@ -135,5 +135,185 @@ namespace app.Forms.Control
         {
 
         }
+
+        private void label5_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Manage_Students.Instance))
+            {
+                H_lecture.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Manage_Students.Instance);
+                Manage_Students.Instance.Dock = DockStyle.Fill;
+                Manage_Students.Instance.BringToFront();
+            }
+            else
+            {
+                Manage_Students.Instance.BringToFront();
+            }
+        }
+
+        private void label1_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Manage_Students.Instance))
+            {
+                H_lecture.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Manage_Students.Instance);
+                Manage_Students.Instance.Dock = DockStyle.Fill;
+                Manage_Students.Instance.BringToFront();
+            }
+            else
+            {
+                Manage_Students.Instance.BringToFront();
+            }
+        }
+
+        private void pictureBox3_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Manage_Students.Instance))
+            {
+                H_lecture.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Manage_Students.Instance);
+                Manage_Students.Instance.Dock = DockStyle.Fill;
+                Manage_Students.Instance.BringToFront();
+            }
+            else
+            {
+                Manage_Students.Instance.BringToFront();
+            }
+        }
+
+        private void label8_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Add_Student_Groups.Instance))
+            {
+                Add_Student_Groups.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Add_Student_Groups.Instance);
+                Add_Student_Groups.Instance.Dock = DockStyle.Fill;
+                Add_Student_Groups.Instance.BringToFront();
+            }
+            else
+            {
+                Add_Student_Groups.Instance.BringToFront();
+            }
+        }
+
+        private void label7_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Add_Student_Groups.Instance))
+            {
+                Add_Student_Groups.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Add_Student_Groups.Instance);
+                Add_Student_Groups.Instance.Dock = DockStyle.Fill;
+                Add_Student_Groups.Instance.BringToFront();
+            }
+            else
+            {
+                Add_Student_Groups.Instance.BringToFront();
+            }
+        }
+
+        private void pictureBox2_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Add_Student_Groups.Instance))
+            {
+                Add_Student_Groups.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Add_Student_Groups.Instance);
+                Add_Student_Groups.Instance.Dock = DockStyle.Fill;
+                Add_Student_Groups.Instance.BringToFront();
+            }
+            else
+            {
+                Add_Student_Groups.Instance.BringToFront();
+            }
+        }
+
+        private void label12_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Manage_Tags.Instance))
+            {
+                Manage_Tags.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Manage_Tags.Instance);
+                Manage_Tags.Instance.Dock = DockStyle.Fill;
+                Manage_Tags.Instance.BringToFront();
+            }
+            else
+            {
+                Manage_Tags.Instance.BringToFront();
+            }
+        }
+
+        private void label13_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Manage_Tags.Instance))
+            {
+                Manage_Tags.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Manage_Tags.Instance);
+                Manage_Tags.Instance.Dock = DockStyle.Fill;
+                Manage_Tags.Instance.BringToFront();
+            }
+            else
+            {
+                Manage_Tags.Instance.BringToFront();
+            }
+        }
+
+        private void pictureBox4_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Manage_Tags.Instance))
+            {
+                Manage_Tags.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Manage_Tags.Instance);
+                Manage_Tags.Instance.Dock = DockStyle.Fill;
+                Manage_Tags.Instance.BringToFront();
+            }
+            else
+            {
+                Manage_Tags.Instance.BringToFront();
+            }
+        }
+
+        private void label18_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Add_Tags.Instance))
+            {
+                Add_Tags.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Add_Tags.Instance);
+                Add_Tags.Instance.Dock = DockStyle.Fill;
+                Add_Tags.Instance.BringToFront();
+            }
+            else
+            {
+                Add_Tags.Instance.BringToFront();
+            }
+        }
+
+        private void label17_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Add_Tags.Instance))
+            {
+                Add_Tags.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Add_Tags.Instance);
+                Add_Tags.Instance.Dock = DockStyle.Fill;
+                Add_Tags.Instance.BringToFront();
+            }
+            else
+            {
+                Add_Tags.Instance.BringToFront();
+            }
+        }
+
+        private void pictureBox5_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (!PnlContainer.Controls.Contains(Add_Tags.Instance))
+            {
+                Add_Tags.Instance.Dock = DockStyle.None;
+                PnlContainer.Controls.Add(Add_Tags.Instance);
+                Add_Tags.Instance.Dock = DockStyle.Fill;
+                Add_Tags.Instance.BringToFront();
+            }
+            else
+            {
+                Add_Tags.Instance.BringToFront();
+            }
+        }
     }
 }
