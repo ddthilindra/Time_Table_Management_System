@@ -58,6 +58,7 @@ namespace app.Forms.Session
             loadGroup();
             loadSubGroup();
             loadSessionID();
+            //loadSubject();
         }
 
         //Database Connection
@@ -187,7 +188,7 @@ namespace app.Forms.Session
         {
             try
             {
-                SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT DISTINCT SubjectName FROM Session", connection);
+                SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT DISTINCT SubjectName FROM Subject", connection);
                 DataTable dataTable = new DataTable();
                 dataAdapter.Fill(dataTable);
                 cmbSelectSubjectConsec.DataSource = dataTable;
@@ -201,6 +202,25 @@ namespace app.Forms.Session
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        public void loadSubject()
+        {
+            cmbSelectSubjectConsec.Items.Clear();
+            con.Open();
+            SqlCommand cmd = con.CreateCommand();
+            cmd.CommandType = CommandType.Text;
+            cmd.CommandText = "SELECT SubjectName FROM Subject";
+            cmd.ExecuteNonQuery();
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            da.Fill(dt);
+            foreach (DataRow dr in dt.Rows)
+            {
+                cmbSelectSubjectConsec.Items.Add(dr["SubjectName"].ToString());
+            }
+
+            con.Close();
         }
 
         public void fetchAcademicYearFromDB(ComboBox comboName)
@@ -625,7 +645,7 @@ namespace app.Forms.Session
             using (SqlConnection con = new SqlConnection(myconstr))
             {
                 con.Open();
-                SqlDataAdapter sad = new SqlDataAdapter("SELECT *FROM  Time WHERE Id = '" + textBox2.Text.Trim() + "'", con);
+                SqlDataAdapter sad = new SqlDataAdapter("SELECT *FROM  TimeT WHERE Id = '" + textBox2.Text.Trim() + "'", con);
                 DataTable dt = new DataTable();
                 _ = sad.Fill(dt);
 

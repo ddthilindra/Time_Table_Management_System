@@ -38,7 +38,7 @@ namespace app
             try
             {
                 //step 2: writting Sql query
-                String sql = "Select * From Time";
+                String sql = "Select * From TimeT";
                 //Creating cmd using sql & conn
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //Creating Sql data adapter using cmd
@@ -69,7 +69,7 @@ namespace app
             try
             {
                 //Step 2: Create sql query to inert data
-                String sql = "Insert Into Time(SeLecturer, SeGroup, SeSubGroup, SeSessionID, SeTimeDuration) Values(@comboBoxNo1, @comboBoxNo2, @comboBoxNo3, @comboBoxNo4, @comboBoxNo5)";
+                String sql = "Insert Into TimeT(SeLecturer, SeGroup, SeSubGroup, SeSessionID, SeTimeDuration) Values(@comboBoxNo1, @comboBoxNo2, @comboBoxNo3, @comboBoxNo4, @comboBoxNo5)";
                 //Creating cmd using sql & conn
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //Create Parameters to Add Data
@@ -122,7 +122,7 @@ namespace app
             try
             {
                 //Sql command to update data in the database
-                string sql = "update Time set SeLecturer=@comboBoxNo1, SeGroup=@comboBoxNo2, SeSubGroup=@comboBoxNo3, SeSessionID=@comboBoxNo4, SeTimeDuration=@comboBoxNo5 where Id = @id";
+                string sql = "update TimeT set SeLecturer=@comboBoxNo1, SeGroup=@comboBoxNo2, SeSubGroup=@comboBoxNo3, SeSessionID=@comboBoxNo4, SeTimeDuration=@comboBoxNo5 where Id = @id";
                 //Creating cmd using sql & conn
                 SqlCommand cmd = new SqlCommand(sql, conn);
 
@@ -169,7 +169,7 @@ namespace app
             SqlConnection conn = new SqlConnection(myconnstring);
             try
             {
-                string sql = "DELETE FROM Time WHERE Id = @id";
+                string sql = "DELETE FROM TimeT WHERE Id = @id";
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@id", NoTimes.Id);
 

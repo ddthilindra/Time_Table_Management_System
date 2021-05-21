@@ -29,7 +29,7 @@ namespace app.Class.Location
             {
                 //Select query
                 con.Open();
-                string sql = "SELECT * FROM SESLOC";
+                string sql = "SELECT * FROM SESSLOC";
                 SqlCommand cmd = new SqlCommand(sql, con);
                 SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
@@ -117,7 +117,7 @@ namespace app.Class.Location
             try
             {
                 //2.sql query to insert 
-                string sql = "INSERT INTO SESLOC (SessionName, SessionRoom ) VALUES(@SessionName, @SessionRoom )";
+                string sql = "INSERT INTO SESSLOC (SessionName, SessionRoom ) VALUES(@SessionName, @SessionRoom )";
                 //create SQL command using sql and conn
                 SqlCommand cmd = new SqlCommand(sql, conn);
                 //Parameters to add data

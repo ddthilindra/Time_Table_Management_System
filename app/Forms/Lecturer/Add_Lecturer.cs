@@ -181,13 +181,13 @@ namespace app.Forms.Lecturer
         private void Add_Lecturer_Load(object sender, EventArgs e)
         {
             //Load the drop down data to from
-            loadFaculty();
+            //loadFaculty();
             loadBuilding();
-            loadCenter();
-            loadDepartment();
-            loadLevel();
+            //loadCenter();
+            //loadDepartment();
+            //loadLevel();
             loadWorkingDay();
-            loadWorkingHours();
+            //loadWorkingHours();
 
             //if button text update, Then table value set to update form
             if (btnAddLecSub.Text == "Update")
@@ -362,14 +362,14 @@ namespace app.Forms.Lecturer
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT Building FROM addlecfill";
+            cmd.CommandText = "SELECT BuildingName FROM Location";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                ddBuilding.Items.Add(dr["Building"].ToString());
+                ddBuilding.Items.Add(dr["BuildingName"].ToString());
             }
 
             con.Close();
@@ -402,14 +402,14 @@ namespace app.Forms.Lecturer
             con.Open();
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "SELECT WD FROM addlecfill";
+            cmd.CommandText = "SELECT NumberofWorking FROM Work";
             cmd.ExecuteNonQuery();
             DataTable dt = new DataTable();
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             da.Fill(dt);
             foreach (DataRow dr in dt.Rows)
             {
-                ddWorkingD.Items.Add(dr["WD"].ToString());
+                ddWorkingD.Items.Add(dr["NumberofWorking"].ToString());
             }
 
             con.Close();
@@ -458,6 +458,7 @@ namespace app.Forms.Lecturer
         //Method to close the form
         private void bunifuButton1_Click(object sender, EventArgs e)
         {
+            clear();
             this.Close();
         }
     }

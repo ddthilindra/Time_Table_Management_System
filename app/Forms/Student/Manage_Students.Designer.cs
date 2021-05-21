@@ -460,7 +460,7 @@
             this.btn_Clear.IdleIconLeftImage = null;
             this.btn_Clear.IdleIconRightImage = null;
             this.btn_Clear.IndicateFocus = true;
-            this.btn_Clear.Location = new System.Drawing.Point(641, 212);
+            this.btn_Clear.Location = new System.Drawing.Point(641, 172);
             this.btn_Clear.Name = "btn_Clear";
             stateProperties7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             stateProperties7.BorderRadius = 45;
@@ -525,7 +525,7 @@
             this.btn_Save.IdleIconLeftImage = null;
             this.btn_Save.IdleIconRightImage = null;
             this.btn_Save.IndicateFocus = true;
-            this.btn_Save.Location = new System.Drawing.Point(831, 212);
+            this.btn_Save.Location = new System.Drawing.Point(831, 172);
             this.btn_Save.Name = "btn_Save";
             stateProperties9.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(118)))), ((int)(((byte)(212)))));
             stateProperties9.BorderRadius = 45;

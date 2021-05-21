@@ -26,7 +26,7 @@ namespace app.Forms
 
         private void btnMax_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Maximized;
         }
 
         private void btnMin_Click(object sender, EventArgs e)

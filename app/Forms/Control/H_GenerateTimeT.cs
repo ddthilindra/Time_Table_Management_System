@@ -133,7 +133,7 @@ namespace app.Forms.Control
 
         private string chksessionTime(string sc)
         {
-            string q = "SELECT SeTimeDuration FROM Time WHERE SeSessionID='"+sc+"'";
+            string q = "SELECT SeTimeDuration FROM TimeT WHERE SeSessionID='"+sc+"'";
             SqlCommand cmd = new SqlCommand(q, con);
             con.Open();
             SqlDataReader dr = cmd.ExecuteReader();
